@@ -15,7 +15,14 @@ fieldset {
     padding: 10px;
 }
 
-#draggable:focus {
+#draggable {
+    position: relative; /* Allows movement based on left/top properties */
     outline: 3px solid #5b9dd9;
     cursor: move;
+    width: 100px;
+    height: 100px;
+    background-color: #4A90E2;
+    color: white;
+    line-height: 100px;
+    text-align: center;
 }

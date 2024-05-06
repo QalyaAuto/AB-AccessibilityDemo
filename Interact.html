@@ -28,10 +28,20 @@
     <!-- Radio Buttons -->
     <fieldset>
         <legend>Choose a Location</legend>
-        <label><input type="radio" name="location" value="New York" tabindex="0"> New York</label>
-        <label><input type="radio" name="location" value="London" tabindex="0"> London</label>
-        <label><input type="radio" name="location" value="Tokyo" tabindex="0"> Tokyo</label>
+        <div>
+            <input type="radio" id="new_york" name="location" value="New York" tabindex="0">
+            <label for="new_york">New York</label>
+        </div>
+        <div>
+            <input type="radio" id="london" name="location" value="London" tabindex="0">
+            <label for="london">London</label>
+        </div>
+        <div>
+            <input type="radio" id="tokyo" name="location" value="Tokyo" tabindex="0">
+            <label for="tokyo">Tokyo</label>
+        </div>
     </fieldset>
+    
 
     <!-- Draggable Item -->
     <p>Drag this box:</p>
@@ -39,7 +49,7 @@
         Drag me
     </div>
 
-    <script src="script.js"></script>
+    <script src="js\scriptInteract.js"></script>
 </body>
 
 </html>
