@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the header */
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* Adds space below the header */
+}
+
+/* Styling for paragraph text */
+p {
+    margin-bottom: 20px; /* Adds space below the paragraph */
+    color: #666;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #2100c8; /* Blue background */
+    color: white;
+    font-family: Arial, sans-serif; /* Simple sans-serif font */
+    font-size: 20px; /* Larger font size */
+    text-decoration: none; /* Removes underline */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
+    border: solid 3px white; /* White border around the button */
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover, .button:focus {
+    background-color: rgb(21, 45, 70); /* Darker blue on hover/focus */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Slightly more prominent shadow on hover/focus */
+}
