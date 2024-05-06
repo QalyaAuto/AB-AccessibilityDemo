@@ -1,0 +1,21 @@
+input[type="text"], select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+fieldset {
+    border: none;
+    padding: 10px;
+}
+
+#draggable:focus {
+    outline: 3px solid #5b9dd9;
+    cursor: move;
+}

@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Table Page</title>
     <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="stylesheet" type="text/css" href="css\table.css">
 </head>
 
 <body>
     <h1>Pagina per gli oggetti Tabella</h1>
     <p>Esempio di accessibilita' su varie tabelle</p>
+
+    <h2>Accessible Table</h2>
+    <table aria-label="Tabella di dati accessibile">
+        <caption>Tabella dati</caption>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Ruolo</th>
+                <th scope="col">Luogo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td tabindex="0">1</td>
+                <td tabindex="0">John Doe</td>
+                <td tabindex="0">Developer</td>
+                <td tabindex="0">New York</td>
+            </tr>
+            <tr>
+                <td tabindex="0">2</td>
+                <td tabindex="0">Jane Smith</td>
+                <td tabindex="0">Designer</td>
+                <td tabindex="0">London</td>
+            </tr>
+            <tr>
+                <td tabindex="0">3</td>
+                <td tabindex="0">Alice Johnson</td>
+                <td tabindex="0">Manager</td>
+                <td tabindex="0">Tokyo</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>

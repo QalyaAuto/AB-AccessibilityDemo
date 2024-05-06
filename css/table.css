@@ -1,0 +1,35 @@
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #2100c8;
+    color: white;
+}
+
+tbody tr:focus-within, tbody tr:hover {
+    background-color: #f1f1f1;
+    outline: none;
+}
+
+caption {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+/* Enhanced visual focus indicator for keyboard navigation */
+[tabindex="0"]:focus {
+    outline: 3px solid #5b9dd9;
+    outline-offset: 2px;
+}

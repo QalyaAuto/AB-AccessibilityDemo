@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Interact Page</title>
     <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="stylesheet" type="text/css" href="css\interact.css">
 </head>
 
 <body>
     <h1>Pagina per gli oggetti interattivi</h1>
     <p>Esempio di accessibilita' su semplici oggetti interattivi come Combobox, Radiobox, Dropdown, Draggable, <etc class="etc">etc...</etc></p>
+    
+    <!-- Textbox -->
+    <label for="textbox">Your Name:</label>
+    <input type="text" id="textbox" name="textbox" tabindex="0" aria-label="Name textbox">
+
+    <!-- Combobox/Dropdown -->
+    <label for="dropdown">Choose a Role:</label>
+    <select id="dropdown" name="dropdown" tabindex="0" aria-label="Role dropdown">
+        <option value="developer">Developer</option>
+        <option value="designer">Designer</option>
+        <option value="manager">Manager</option>
+    </select>
+
+    <!-- Radio Buttons -->
+    <fieldset>
+        <legend>Choose a Location</legend>
+        <label><input type="radio" name="location" value="New York" tabindex="0"> New York</label>
+        <label><input type="radio" name="location" value="London" tabindex="0"> London</label>
+        <label><input type="radio" name="location" value="Tokyo" tabindex="0"> Tokyo</label>
+    </fieldset>
+
+    <!-- Draggable Item -->
+    <p>Drag this box:</p>
+    <div id="draggable" tabindex="0" draggable="true" aria-grabbed="false" aria-label="Draggable box" style="width:100px; height:100px; background-color:#4A90E2; color:white; line-height:100px; text-align:center;">
+        Drag me
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
