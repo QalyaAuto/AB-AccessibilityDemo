@@ -9,39 +9,43 @@
     <link rel="stylesheet" type="text/css" href="css\table.css">
 </head>
 
-<body>
+<body link=blue  alink="#0420b0" vlink=green>
     <h1>Pagina per gli oggetti Tabella</h1>
     <p>Esempio di accessibilita' su varie tabelle</p>
 
     <h2>Accessible Table</h2>
     <table aria-label="Tabella di dati accessibile">
-        <caption>Tabella dati</caption>
+        <caption>Tabella dei voli</caption>
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Ruolo</th>
-                <th scope="col">Luogo</th>
+                <th scope="col">Partenza</th>
+                <th scope="col">Destinazione</th>
+                <th scope="col">Durata Viaggio</th>
+                <th scope="col">Prenota ORA!</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody >
             <tr>
-                <td tabindex="0">1</td>
-                <td tabindex="0">John Doe</td>
-                <td tabindex="0">Developer</td>
-                <td tabindex="0">New York</td>
+                <td>1</td>
+                <td>Roma (Qualsiasi)</td>
+                <td>New York</td>
+                <td>9 ore e 35 minuti</td>
+                <td><a target="_blank" href="https://www.ita-airways.com/it_it">Cerca il volo</a></td>
             </tr>
             <tr>
-                <td tabindex="0">2</td>
-                <td tabindex="0">Jane Smith</td>
-                <td tabindex="0">Designer</td>
-                <td tabindex="0">London</td>
+                <td>2</td>
+                <td>Roma (Qualsiasi)</td>
+                <td>London</td>
+                <td>2 ore e 40 minuti</td>
+                <td><a target="_blank" href="https://www.ita-airways.com/it_it">Cerca il volo</a></td>
             </tr>
             <tr>
-                <td tabindex="0">3</td>
-                <td tabindex="0">Alice Johnson</td>
-                <td tabindex="0">Manager</td>
-                <td tabindex="0">Tokyo</td>
+                <td>3</td>
+                <td>Roma (Qualsiasi)</td>
+                <td>Tokyo</td>
+                <td>2 ore e 40 minuti</td>
+                <td><a target="_blank" href="https://www.ita-airways.com/it_it">Cerca il volo</a></td>
             </tr>
         </tbody>
     </table>
