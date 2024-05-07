@@ -48,7 +48,8 @@ footer {
 }
 footer a {
     color: #fff;
-    text-decoration: none;
+    text-decoration:underline;
+    padding: 10px;
 }
 
 .padding {
