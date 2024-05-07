@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
     display: block;
     justify-content: center;
     align-items: center;
@@ -39,4 +38,19 @@ p {
 .button:hover, .button:focus {
     background-color: rgb(21, 45, 70); /* Darker blue on hover/focus */
     box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Slightly more prominent shadow on hover/focus */
+}
+
+footer {
+    background-color: #2100c8;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.padding {
+    padding: 20px;
 }
