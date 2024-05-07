@@ -41,6 +41,10 @@ p {
 }
 
 footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-color: #2100c8;
     color: #fff;
     padding: 20px;
