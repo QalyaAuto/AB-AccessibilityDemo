@@ -11,6 +11,18 @@ input, select, button {
     border-radius: 5px;
 }
 
+button {
+    background-color: #2100c8; /* Blue background */
+    color: white;
+    font-family: Arial, sans-serif; /* Simple sans-serif font */
+    font-size: 15px; /* Larger font size */
+    text-decoration: none; /* Removes underline */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
+    border: solid 3px white; /* White border around the button */
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
 /* Focus visibility */
 :focus {
     outline: 3px solid #5b9dd9;
