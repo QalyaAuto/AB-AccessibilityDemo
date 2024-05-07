@@ -1,3 +1,21 @@
+/* General styles for all containers */
+.container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input, select, button {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Focus visibility */
+:focus {
+    outline: 3px solid #5b9dd9;
+}
+
 input[type="text"], select {
     padding: 10px;
     margin: 10px 0;
@@ -16,7 +34,7 @@ fieldset {
 }
 
 #draggable {
-    position: relative; /* Allows movement based on left/top properties */
+    position: absolute; /* Allows movement based on left/top properties */
     outline: 3px solid #5b9dd9;
     cursor: move;
     width: 100px;

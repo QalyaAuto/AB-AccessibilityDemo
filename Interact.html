@@ -11,42 +11,106 @@
 
 <body>
     <h1>Pagina per gli oggetti interattivi</h1>
-    <p>Esempio di accessibilita' su semplici oggetti interattivi come Combobox, Radiobox, Dropdown, Draggable, <etc class="etc">etc...</etc></p>
-    
+    <p>Esempio di accessibilita' su semplici oggetti interattivi come Combobox, Radiobox, Dropdown, Draggable, <etc
+            class="etc">etc...</etc>
+    </p>
+
     <!-- Textbox -->
-    <label for="textbox">Your Name:</label>
-    <input type="text" id="textbox" name="textbox" tabindex="0" aria-label="Name textbox">
+    <div class="textbox container">
+        <label for="textbox">Your Name:</label>
+        <input type="text" id="textbox" name="textbox" tabindex="0" aria-label="Name textbox">
+    </div>
+
+    <!-- Checkbox -->
+    <div class="checkbox container">
+        <h1>Check Box</h1>
+        <label for="agree">
+            <input type="checkbox" id="agree" name="agree" tabindex="0"> I agree
+        </label>
+    </div>
 
     <!-- Combobox/Dropdown -->
-    <label for="dropdown">Choose a Role:</label>
-    <select id="dropdown" name="dropdown" tabindex="0" aria-label="Role dropdown">
-        <option value="developer">Developer</option>
-        <option value="designer">Designer</option>
-        <option value="manager">Manager</option>
-    </select>
+    <div class="comboxboxAndDropdown container">
+        <label for="dropdown">Choose a Role:</label>
+        <select id="dropdown" name="dropdown" tabindex="0" aria-label="Role dropdown">
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Manager</option>
+        </select>
+    </div>
 
     <!-- Radio Buttons -->
-    <fieldset>
-        <legend>Choose a Location</legend>
-        <div>
-            <input type="radio" id="new_york" name="location" value="New York" tabindex="0">
-            <label for="new_york">New York</label>
+    <div class="radiobutton container">
+        <fieldset>
+            <legend>Choose a Location</legend>
+            <div>
+                <input type="radio" id="new_york" name="location" value="New York" tabindex="0">
+                <label for="new_york">New York</label>
+            </div>
+            <div>
+                <input type="radio" id="london" name="location" value="London" tabindex="0">
+                <label for="london">London</label>
+            </div>
+            <div>
+                <input type="radio" id="tokyo" name="location" value="Tokyo" tabindex="0">
+                <label for="tokyo">Tokyo</label>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Links -->
+    <div class="links container">
+        <a href="#" tabindex="0">Home</a>
+        <a href="#" tabindex="0">About</a>
+        <a href="#" tabindex="0">Services</a>
+    </div>
+
+    <!-- Alerts -->
+    <div class="alerts container">
+        <button onclick="alert('This is an alert!')" tabindex="0">Show Alert</button>
+    </div>
+
+    <!-- Modal Dialogs -->
+    <div class="modals container">
+        <button id="openModal" tabindex="0">Open Modal</button>
+        <div id="myModal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span id="closeModal" tabindex="0">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
         </div>
-        <div>
-            <input type="radio" id="london" name="location" value="London" tabindex="0">
-            <label for="london">London</label>
-        </div>
-        <div>
-            <input type="radio" id="tokyo" name="location" value="Tokyo" tabindex="0">
-            <label for="tokyo">Tokyo</label>
-        </div>
-    </fieldset>
-    
+    </div>
+
+    <!-- Date Picker -->
+    <div class="datepicker container">
+        <label for="date">Choose a date:</label>
+        <input type="date" id="date" name="date" tabindex="0">
+    </div>
+
+    <!-- Slider -->
+    <div class="slider container">
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" tabindex="0">
+    </div>
+
+
+    <!-- Selectable -->
+    <div class="selectable container">
+        <ul tabindex="0">
+            <li tabindex="0">Item 1</li>
+            <li tabindex="0">Item 2</li>
+            <li tabindex="0">Item 3</li>
+        </ul>
+    </div>
+
 
     <!-- Draggable Item -->
-    <p>Drag this box:</p>
-    <div id="draggable" tabindex="0" draggable="true" aria-grabbed="false" aria-label="Draggable box" style="width:100px; height:100px; background-color:#4A90E2; color:white; line-height:100px; text-align:center;">
-        Drag me
+    <div class="draggable container">
+        <p>Drag this box:</p>
+        <div id="draggable" tabindex="0" draggable="true" aria-grabbed="false" aria-label="Draggable box"
+            style="width:100px; height:100px; background-color:#4A90E2; color:white; line-height:100px; text-align:center; position: absolute;">
+            Drag me
+        </div>
     </div>
 
     <script src="js\scriptInteract.js"></script>
