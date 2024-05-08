@@ -1,6 +1,7 @@
 html {
     font-size: 16px;
   }
+
   .screen {
     height: 60px;
     position: relative;
@@ -26,9 +27,25 @@ html {
   .seat {
     display: flex;
     flex: auto;
-    padding: 10px 5px;
+    padding: 15px 15px;
     position: relative;
+    
+  } 
+  
+  .seat :focus {
+      border: 1x solid rgb(0, 0, 0);
+      outline: 2.5px solid rgb(0, 0, 0);
+      transform: scale(1.2);
+    
   }
+
+  .seat :hover {      
+    border: 1x solid rgb(0, 0, 0);
+    outline: 2.5px solid rgb(0, 0, 0);
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
   .seat input[type=checkbox] {
     position: absolute;
     opacity: 0;
