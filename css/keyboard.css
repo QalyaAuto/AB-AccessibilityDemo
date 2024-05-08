@@ -1,0 +1,7 @@
+#scrollableText{
+    resize: both;
+}
+
+.resizable:focus{
+    outline: 3px solid blue; 
+}
