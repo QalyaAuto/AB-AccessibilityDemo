@@ -12,45 +12,85 @@
 <body>
     <div class="padding">
         <!-- Go Back button -->
-        <a href=main.html class="backButton"><img src="assets\images\freccia.png" style="padding-right: 5px;width: 22px;height: 15px;"> Indietro</a>
-        <h1 id="top">Pagina per la navigazione da tastiera</h1>
-        <p>Esempio di accessibilita' sull'utilizzo della sola tastiera come modalita' di movimento all'interno della pagina web</p>
+        <div class="top command">
+            <a href=main.html class="backButton"><img src="assets\images\freccia.png"
+                    style="padding-right: 5px;width: 22px;height: 15px;"> Indietro</a>
 
-        <p style="color: #000000;font-size:20px;">
-            Benvenuti nella nostra guida sull'accessibilità digitale, un argomento cruciale nell'era moderna in cui la tecnologia permea ogni aspetto della nostra vita quotidiana. In questa pagina esploreremo l'importanza dell'accessibilità digitale, i suoi principi fondamentali e come implementarli efficacemente per garantire un'esperienza inclusiva per tutti gli utenti, indipendentemente dalle loro capacità o limitazioni. 
-        </p>
+        </div>
+        <!-- Top Page -->
+        <div class="top page">
+            <h1 id="top">Pagina per la navigazione da tastiera</h1>
+            <p>Esempio di accessibilita' sull'utilizzo della sola tastiera come modalita' di movimento all'interno della
+                pagina web</p>
+        </div>
+
+        <div class="top description">
+            <p style="color: #000000;font-size:20px;">
+                Benvenuti nella nostra guida sull'accessibilità digitale, un argomento cruciale nell'era moderna in cui
+                la
+                tecnologia permea ogni aspetto della nostra vita quotidiana. In questa pagina esploreremo l'importanza
+                dell'accessibilità digitale, i suoi principi fondamentali e come implementarli efficacemente per
+                garantire
+                un'esperienza inclusiva per tutti gli utenti, indipendentemente dalle loro capacità o limitazioni.
+            </p>
+        </div>
+
 
         <!-- Text region with scroll -->
-        <div style="height:200px;width:700px;border:1px solid #ccc;font-size:20px;overflow:auto;" tabindex="0">
-            L'accessibilità digitale rappresenta un cardine fondamentale nell'epoca contemporanea, in cui l'utilizzo di Internet e delle tecnologie digitali è diventato onnipresente. Questo concetto si riferisce alla capacità di garantire che tutti, indipendentemente dalle loro abilità fisiche o cognitive, possano accedere e utilizzare in modo efficace i siti web, le applicazioni e altre risorse digitali.
+        <div id="scrollableText" class="resizable" style="height:200px;width:700px;border:1px solid #ccc;font-size:20px;overflow:auto;"
+        aria-label="Contenitore ridimensionabile, utilizzare le frecce per ridimensionare" aria-grabbed="false" tabindex="0">
+            L'accessibilità digitale rappresenta un cardine fondamentale nell'epoca contemporanea, in cui l'utilizzo di
+            Internet e delle tecnologie digitali è diventato onnipresente. Questo concetto si riferisce alla capacità di
+            garantire che tutti, indipendentemente dalle loro abilità fisiche o cognitive, possano accedere e utilizzare
+            in modo efficace i siti web, le applicazioni e altre risorse digitali.
 
-            Una progettazione e uno sviluppo attenti mirano a rendere l'esperienza digitale inclusiva per tutti, compresi coloro che utilizzano tecnologie assistive come screen reader per non vedenti, tastiere alternative per persone con disabilità motorie o software per la lettura dei testi per coloro con difficoltà di lettura.
+            Una progettazione e uno sviluppo attenti mirano a rendere l'esperienza digitale inclusiva per tutti,
+            compresi coloro che utilizzano tecnologie assistive come screen reader per non vedenti, tastiere alternative
+            per persone con disabilità motorie o software per la lettura dei testi per coloro con difficoltà di lettura.
 
-            L'accessibilità digitale offre numerosi vantaggi. Innanzitutto, promuove l'inclusione sociale, consentendo a individui con disabilità di partecipare appieno alla vita digitale e alla società nel suo complesso. Ciò non solo rispetta i loro diritti, ma arricchisce anche il tessuto sociale nel suo complesso, valorizzando le diverse prospettive e contributi.
+            L'accessibilità digitale offre numerosi vantaggi. Innanzitutto, promuove l'inclusione sociale, consentendo a
+            individui con disabilità di partecipare appieno alla vita digitale e alla società nel suo complesso. Ciò non
+            solo rispetta i loro diritti, ma arricchisce anche il tessuto sociale nel suo complesso, valorizzando le
+            diverse prospettive e contributi.
 
-            Inoltre, un design accessibile non è vantaggioso solo per le persone con disabilità, ma migliora anche l'esperienza utente per tutti. Siti web ben strutturati e facili da navigare sono apprezzati da una vasta gamma di utenti e possono portare a una maggiore soddisfazione complessiva degli utenti.
+            Inoltre, un design accessibile non è vantaggioso solo per le persone con disabilità, ma migliora anche
+            l'esperienza utente per tutti. Siti web ben strutturati e facili da navigare sono apprezzati da una vasta
+            gamma di utenti e possono portare a una maggiore soddisfazione complessiva degli utenti.
 
-            Migliorare l'accessibilità digitale non solo rappresenta un atto di responsabilità sociale, ma può anche portare a benefici tangibili per le organizzazioni. Un'ampia adozione di pratiche di accessibilità può ampliare il pubblico di un sito web o di un'applicazione, attraendo persone con disabilità che altrimenti potrebbero non essere in grado di utilizzare tali servizi.
+            Migliorare l'accessibilità digitale non solo rappresenta un atto di responsabilità sociale, ma può anche
+            portare a benefici tangibili per le organizzazioni. Un'ampia adozione di pratiche di accessibilità può
+            ampliare il pubblico di un sito web o di un'applicazione, attraendo persone con disabilità che altrimenti
+            potrebbero non essere in grado di utilizzare tali servizi.
 
-            Tuttavia, nonostante i benefici evidenti, ci sono ancora diverse sfide da affrontare nell'implementare l'accessibilità digitale in modo completo. La consapevolezza limitata in merito alle migliori pratiche, la complessità tecnica associata all'adeguamento di piattaforme esistenti e le preoccupazioni finanziarie sono solo alcune delle barriere che le organizzazioni possono incontrare nel loro percorso verso un'esperienza digitale più inclusiva.
+            Tuttavia, nonostante i benefici evidenti, ci sono ancora diverse sfide da affrontare nell'implementare
+            l'accessibilità digitale in modo completo. La consapevolezza limitata in merito alle migliori pratiche, la
+            complessità tecnica associata all'adeguamento di piattaforme esistenti e le preoccupazioni finanziarie sono
+            solo alcune delle barriere che le organizzazioni possono incontrare nel loro percorso verso un'esperienza
+            digitale più inclusiva.
 
-            Nonostante queste sfide, investire nell'accessibilità digitale è fondamentale per costruire un mondo online che sia veramente accessibile e inclusivo per tutti. È un investimento non solo nel rispetto dei diritti umani fondamentali, ma anche nell'enorme potenziale di innovazione e crescita che deriva dall'inclusione di tutti i membri della società digitale.
+            Nonostante queste sfide, investire nell'accessibilità digitale è fondamentale per costruire un mondo online
+            che sia veramente accessibile e inclusivo per tutti. È un investimento non solo nel rispetto dei diritti
+            umani fondamentali, ma anche nell'enorme potenziale di innovazione e crescita che deriva dall'inclusione di
+            tutti i membri della società digitale.
 
-            Per saperne di più : <a href="https://www.w3.org/Translations/WCAG22-it/" tabindex="0" target="_blank">Clicca Qui</a>
+            Per saperne di più : <a href="https://www.w3.org/Translations/WCAG22-it/" tabindex="0"
+                target="_blank">Clicca Qui</a>
         </div>
 
         <!-- Images -->
-        <div style="padding-top: 50px; border: #666 1px;">
-
-            <img alt-text="Immagine non Link" src="assets\images\img-accessibilità1.jpeg" style="width:300px;height:300px;">
-            <figcaption style="color: #666">Immagine non Link</figcaption>
+        <div id="imageBlock">
+            <div style="padding-top: 50px; border: #666 1px;">
+                <img id="imageNoLink" alt-text="Immagine non Link" src="assets\images\img-accessibilità1.jpeg" style="width:300px;height:300px;">
+                <figcaption style="color: #666">Immagine non Link</figcaption>
+                <br>
+                <a id="imageLink" href="https://www.w3.org/Translations/WCAG22-it/" target="_blank">
+                    <img alt-text="Immagine Link" src="assets\images\img-accessibilità2.jpeg"
+                        style="width:300px;height:300px;">
+                </a>
+                <figcaption style="color: #666">Immagine Link</figcaption>
+            </div>
             <br>
-            <a href="https://www.w3.org/Translations/WCAG22-it/" target="_blank">
-                <img alt-text="Immagine Link" src="assets\images\img-accessibilità2.jpeg" style="width:300px;height:300px;">
-            </a>
-            <figcaption style="color: #666">Immagine Link</figcaption>
         </div>
-        <br>
         <!--Go Top Button-->
         <a href="#top" aria-roledescription="per tornare in alto" class="button">Torna su</a>
         <br>
@@ -68,6 +108,8 @@
             </nav>
         </footer>
     </div>
-</body>
+
+    <script src="js\keyboard.js"></script>
+</body> 
 
 </html>
