@@ -9,6 +9,8 @@ html {
   overflow: hidden;
   text-align: center;
   border: 10px solid;
+  align-items: center;
+  font-size: 3em;
 }
 
 .fuselage {
@@ -36,7 +38,7 @@ ol {
   position: relative;
 }
 
-.seat :focus +label{
+.seat :focus+label {
   border: 1x solid rgb(0, 0, 0);
   outline: 2.5px solid rgb(0, 0, 0);
   cursor: pointer;
@@ -62,7 +64,7 @@ ol {
 
 .seat input[type=checkbox]:disabled+label {
   background: #dddddd;
-  text-indent: -1000000%;     
+  text-indent: -1000000%;
   overflow: hidden;
 }
 
@@ -81,7 +83,7 @@ ol {
 /* posti riservati */
 .seat.reserved input[type=checkbox]:disabled+label {
   background: #1adc09;
-  text-indent: 0%;  
+  text-indent: 0%;
   overflow: hidden;
 }
 
@@ -116,6 +118,7 @@ ol {
   background: linear-gradient(to bottom, #66b3ff 0%, #2a5cff 100%);
   /* Gradient for a plush look */
 }
+
 .seat label:before {
   content: "";
   position: absolute;
@@ -128,6 +131,12 @@ ol {
   border-radius: 3px;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .button {
   background-color: #663399;
   border: none;
@@ -137,9 +146,22 @@ ol {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
 }
 
-.visually-hidden{
+#reservedSeats {
+  background-color: #663399;
+  font-weight: 500;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: solid;
+  font-size: 16px;
+  display: none;
+}
+
+.visually-hidden {
   position: absolute;
   display: none;
 }
