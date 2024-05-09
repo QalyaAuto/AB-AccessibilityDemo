@@ -3,6 +3,7 @@ html {
 }
 
 .screen {
+  /*content: url();*/
   height: 60px;
   position: relative;
   overflow: hidden;
@@ -33,14 +34,13 @@ ol {
   flex: auto;
   padding: 15px 15px;
   position: relative;
-
 }
 
-.seat :focus {
+.seat :focus +label{
   border: 1x solid rgb(0, 0, 0);
   outline: 2.5px solid rgb(0, 0, 0);
+  cursor: pointer;
   transform: scale(1.2);
-
 }
 
 .seat :hover {
@@ -62,7 +62,7 @@ ol {
 
 .seat input[type=checkbox]:disabled+label {
   background: #dddddd;
-  /*text-indent: -9999px;*/
+  text-indent: -1000000%;     
   overflow: hidden;
 }
 
@@ -78,7 +78,26 @@ ol {
   cursor: not-allowed;
 }
 
-/*consider change to image to replace the follow two .seat label*/
+/* posti riservati */
+.seat.reserved input[type=checkbox]:disabled+label {
+  background: #1adc09;
+  text-indent: 0%;  
+  overflow: hidden;
+}
+
+.seat.reserved input[type=checkbox]:disabled+label:after {
+  text-indent: 0;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+}
+
+.seat.reserved input[type=checkbox]:disabled+label:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* forma a poltrona */
 .seat label {
   display: block;
   position: relative;
@@ -97,7 +116,6 @@ ol {
   background: linear-gradient(to bottom, #66b3ff 0%, #2a5cff 100%);
   /* Gradient for a plush look */
 }
-
 .seat label:before {
   content: "";
   position: absolute;
@@ -110,24 +128,8 @@ ol {
   border-radius: 3px;
 }
 
-.seat label:hover {
-  cursor: pointer;
-  box-shadow: 0 0 0px 2px #5C6AFF;
-}
-
-/* Style for disabled seats */
-.seat.not_available label {
-  background: #808080; /* Gray color */
-  cursor: not-allowed;
-}
-
-/* Green color when the seat is confirmed */
-.seat.selected label {
-  background: #32CD32; /* Green color */
-}
-
 .button {
-  background-color: #4CAF50;
+  background-color: #663399;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -135,4 +137,9 @@ ol {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.visually-hidden{
+  position: absolute;
+  display: none;
 }
