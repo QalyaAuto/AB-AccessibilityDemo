@@ -82,6 +82,7 @@ html {
     box-shadow: none;
     cursor: not-allowed;
   }
+  
   /*consider change to image to replace the follow two .seat label*/
   .seat label {
     display: block;
@@ -97,6 +98,7 @@ html {
     animation-duration: 300ms;
     animation-fill-mode: both;
   }
+
   .seat label:before {
     content: "";
     position: absolute;
@@ -108,10 +110,19 @@ html {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
   }
+
   .seat label:hover {
     cursor: pointer;
     box-shadow: 0 0 0px 2px #5C6AFF;
   }
+
+  /* Specific styling to simulate the couch shape */
+.seat label {
+  border-radius: 20px 20px 0 0; /* Rounded top and flat bottom */
+  padding-top: 10px; /* More padding at the top to simulate backrest */
+  background: linear-gradient(to bottom, #66b3ff 0%, #2a5cff 100%); /* Gradient for a plush look */
+}
+
   .button {
       background-color: #4CAF50;
       border: none;
