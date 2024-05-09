@@ -1,116 +1,167 @@
 html {
-    font-size: 16px;
-  }
+  font-size: 16px;
+}
 
-  .screen {
-    height: 60px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    border: 10px solid ;
-  }
-  .fuselage {
-    border-right: 5px solid #d8d8d8;
-    border-left: 5px solid #d8d8d8;
-  }
-  ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .seats {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-  .seat {
-    display: flex;
-    flex: auto;
-    padding: 15px 15px;
-    position: relative;
-    
-  } 
-  
-  .seat :focus {
-      border: 1x solid rgb(0, 0, 0);
-      outline: 2.5px solid rgb(0, 0, 0);
-      transform: scale(1.2);
-    
-  }
+.screen {
+  /*content: url();*/
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border: 10px solid;
+  align-items: center;
+  font-size: 3em;
+}
 
-  .seat :hover {      
-    border: 1x solid rgb(0, 0, 0);
-    outline: 2.5px solid rgb(0, 0, 0);
-    cursor: pointer;
-    transform: scale(1.2);
-  }
+.fuselage {
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
 
-  .seat input[type=checkbox] {
-    position: absolute;
-    opacity: 0;
-  }
-  .seat input[type=checkbox]:checked + label {
-    background: #ff99e6;
-    -webkit-animation-name: rubberBand;
-    animation-name: rubberBand;
-    animation-duration: 300ms;
-    animation-fill-mode: both;
-  }
-  .seat input[type=checkbox]:disabled + label {
-    background: #dddddd;
-    text-indent: -9999px;
-    overflow: hidden;
-  }
-  .seat input[type=checkbox]:disabled + label:after {
-    content: "X";
-    text-indent: 0;
-    position: absolute;
-    top: 4px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-  .seat input[type=checkbox]:disabled + label:hover {
-    box-shadow: none;
-    cursor: not-allowed;
-  }
-  /*consider change to image to replace the follow two .seat label*/
-  .seat label {
-    display: block;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5rem;
-    padding: 4px 0;
-    background: #66b3ff;
-    border-radius: 5px;
-    animation-duration: 300ms;
-    animation-fill-mode: both;
-  }
-  .seat label:before {
-    content: "";
-    position: absolute;
-    width: 75%;
-    height: 75%;
-    top: 1px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 3px;
-  }
-  .seat label:hover {
-    cursor: pointer;
-    box-shadow: 0 0 0px 2px #5C6AFF;
-  }
-  .button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-  }
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.seat {
+  display: flex;
+  flex: auto;
+  padding: 15px 15px;
+  position: relative;
+}
+
+.seat :focus+label {
+  border: 1x solid rgb(0, 0, 0);
+  outline: 2.5px solid rgb(0, 0, 0);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat :hover {
+  border: 1x solid rgb(0, 0, 0);
+  outline: 2.5px solid rgb(0, 0, 0);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Pink when the seat is selected */
+.seat input[type=checkbox]:checked+label {
+  background: #ff99e6;
+}
+
+.seat input[type=checkbox]:disabled+label {
+  background: #dddddd;
+  text-indent: -1000000%;
+  overflow: hidden;
+}
+
+.seat input[type=checkbox]:disabled+label:after {
+  text-indent: 0;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+}
+
+.seat input[type=checkbox]:disabled+label:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* posti riservati */
+.seat.reserved input[type=checkbox]:disabled+label {
+  background: #1adc09;
+  text-indent: 0%;
+  overflow: hidden;
+}
+
+.seat.reserved input[type=checkbox]:disabled+label:after {
+  text-indent: 0;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+}
+
+.seat.reserved input[type=checkbox]:disabled+label:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* forma a poltrona */
+.seat label {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5rem;
+  padding: 4px 0;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  border-radius: 20px 20px 0 0;
+  /* Rounded top and flat bottom */
+  padding-top: 10px;
+  /* More padding at the top to simulate backrest */
+  background: linear-gradient(to bottom, #66b3ff 0%, #2a5cff 100%);
+  /* Gradient for a plush look */
+}
+
+.seat label:before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 1px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #663399;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#reservedSeats {
+  background-color: #663399;
+  font-weight: 500;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: solid;
+  font-size: 16px;
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  display: none;
+}
