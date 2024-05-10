@@ -17,7 +17,7 @@ document.getElementById('submit').addEventListener('click', function() {
         let msg = 'I posti '+checkedSeats.join(', ')+' sono stati prenotati'
         reservedSeats.innerHTML = "Avete prenotato i posti "+checkedSeats.join(', ')
         reservedSeats.style.display = "block"
-        alert(msg);
+        showPopup(msg);
     }
     
 });
@@ -28,3 +28,19 @@ document.getElementById('cancel').addEventListener('click', function() {
         checkbox.checked = false; // Deselect all checkboxes
     });
 });
+
+function showPopup(msg) {
+    document.getElementById('confirmationPopup').classList.remove('hidden');
+    document.getElementById('reservedSeatsMessage').innerHTML = "I posti "+msg
+    setTimeout(() => {
+        document.getElementById('confirmActionButton').focus();
+    }, 100);
+}
+
+function closePopup() {
+    document.getElementById('confirmationPopup').classList.add('hidden');
+}
+
+function confirmAction() {
+    closePopup();
+}
