@@ -22,3 +22,22 @@ function aggiungiProdotto(nome, prezzo) {
   var totaleAttuale = parseFloat(totaleElemento.textContent);
   totaleElemento.textContent = (totaleAttuale + prezzo).toFixed(2);
 }
+
+//Event Listener Acquista
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('#acquista').addEventListener('click', function () {
+    showPopup("ACQUISTO ANDATO A BUON FINE!");
+  });
+});
+
+function showPopup(msg) {
+  document.getElementById('confirmationPopup').classList.remove('hidden');
+  document.getElementById('purchaseMessage').innerHTML = "" + msg
+  setTimeout(() => {
+    document.getElementById('confirmActionButton').focus();
+  }, 100);
+}
+
+function confirmAction() {
+  document.getElementById('confirmationPopup').classList.add('hidden');
+}
