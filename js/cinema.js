@@ -7,6 +7,7 @@ document.getElementById('submit').addEventListener('click', function() {
     checkboxes.forEach(function(checkbox) {
         if (checkbox.checked && !checkbox.disabled) {
             checkedSeats.push(checkbox.id)
+            checkbox.setAttribute('aria-disabled', 'true');
             checkbox.disabled = true; // Disable the checkbox
             checkbox.parentElement.classList.add('reserved'); // Add 'not_available' to prevent further selection
         }
