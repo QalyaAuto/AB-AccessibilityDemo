@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="stylesheet" type="text/css" href="css\cinema.css">
+    <script src="https://kit.fontawesome.com/3401cdb452.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="page-container">
+
+        <div class="cinema padding">
+
+            <!-- Go Back button -->
+            <div class="top command">
+                <a href=main.html class="backButton">
+                    <span class="fa-solid fa-circle-chevron-left"
+                        aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
+                    Indietro
+                </a>
+            </div>
+            <!-- Top Page -->
+            <div class="top page">
+                <h1 id="top">Pagina per la simulazione di Prenotazione biglietto del cinema</h1>
+                <p>Esempio di accessibilita' sull'accessibilità all'interno della sezione di selezione poltrone di un
+                    cinema</p>
+            </div>
+
+            <!-- CINEMA SEATS   -->
+            <div class="screen">
+                <h1>SCREEN</h1>
+            </div>
+            <ol class="cabin fuselage">
+                <li class="row row--1">
+                    <ol class="seats left" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="A1" />
+                            <label   tabindex="1" for="A1">A1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A2" />
+                            <label   tabindex="1" for="A2">A2</label>
+                        </li>
+                        <li class="seat">               
+                            <input type="checkbox" id="A3" />
+                            <label   tabindex="1" for="A3">A3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="A4" />
+                            <label for="A4">A4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A5" />
+                            <label   tabindex="1" for="A5">A5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A6" />
+                            <label   tabindex="1" for="A6">A6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A7" />
+                            <label   tabindex="1" for="A7">A7</label>
+                        </li>
+                        </ol>
+                        <ol class="seats right" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="A8" />
+                            <label   tabindex="1" for="A8">A8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A9" />
+                            <label   tabindex="1" for="A9">A9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A10" />
+                            <label   tabindex="1" for="A10">A10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A11" />
+                            <label   tabindex="1" for="A11">A11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A12" />
+                            <label   tabindex="1" for="A12">A12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A13" />
+                            <label   tabindex="1" for="A13">A13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="A14" />
+                            <label   tabindex="1" for="A14">A14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--2">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="B1" />
+                            <label   tabindex="1" for="B1">B1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B2" />
+                            <label   tabindex="1" for="B2">B2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B3" />
+                            <label   tabindex="1" for="B3">B3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="B4" />
+                            <label for="B4">B4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B5" />
+                            <label   tabindex="1" for="B5">B5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B6" />
+                            <label   tabindex="1" for="B6">B6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B7" />
+                            <label   tabindex="1" for="B7">B7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B8" />
+                            <label   tabindex="1" for="B8">B8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B9" />
+                            <label   tabindex="1" for="B9">B9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B10" />
+                            <label   tabindex="1" for="B10">B10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B11" />
+                            <label   tabindex="1" for="B11">B11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B12" />
+                            <label   tabindex="1" for="B12">B12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B13" />
+                            <label   tabindex="1" for="B13">B13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="B14" />
+                            <label   tabindex="1" for="B14">B14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--3">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="C1" />
+                            <label   tabindex="1" for="C1">C1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C2" />
+                            <label   tabindex="1" for="C2">C2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C3" />
+                            <label   tabindex="1" for="C3">C3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="C4" />
+                            <label  for="C4">C4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C5" />
+                            <label   tabindex="1" for="C5">C5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C6" />
+                            <label   tabindex="1" for="C6">C6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C7" />
+                            <label   tabindex="1" for="C7">C7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C8" />
+                            <label   tabindex="1" for="C8">C8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C9" />
+                            <label   tabindex="1" for="C9">C9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C10" />
+                            <label   tabindex="1" for="C10">C10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C11" />
+                            <label   tabindex="1" for="C11">C11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C12" />
+                            <label   tabindex="1" for="C12">C12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C13" />
+                            <label   tabindex="1" for="C13">C13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="C14" />
+                            <label   tabindex="1" for="C14">C14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--4">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="D1" />
+                            <label   tabindex="1" for="D1">D1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D2" />
+                            <label   tabindex="1" for="D2">D2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D3" />
+                            <label   tabindex="1" for="D3">D3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="D4" />
+                            <label  for="D4">D4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D5" />
+                            <label   tabindex="1" for="D5">D5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D6" />
+                            <label   tabindex="1" for="D6">D6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D7" />
+                            <label   tabindex="1" for="D7">D7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D8" />
+                            <label   tabindex="1" for="D8">D8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D9" />
+                            <label   tabindex="1" for="D9">D9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D10" />
+                            <label   tabindex="1" for="D10">D10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D11" />
+                            <label   tabindex="1" for="D11">D11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D12" />
+                            <label   tabindex="1" for="D12">D12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D13" />
+                            <label   tabindex="1" for="D13">D13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="D14" />
+                            <label   tabindex="1" for="D14">D14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--5">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="E1" />
+                            <label   tabindex="1" for="E1">E1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E2" />
+                            <label   tabindex="1" for="E2">E2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E3" />
+                            <label   tabindex="1" for="E3">E3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="E4" />
+                            <label  for="E4">E4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E5" />
+                            <label   tabindex="1" for="E5">E5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E6" />
+                            <label   tabindex="1" for="E6">E6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E7" />
+                            <label   tabindex="1" for="E7">E7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E8" />
+                            <label   tabindex="1" for="E8">E8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E9" />
+                            <label   tabindex="1" for="E9">E9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E10" />
+                            <label   tabindex="1" for="E10">E10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E11" />
+                            <label   tabindex="1" for="E11">E11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E12" />
+                            <label   tabindex="1" for="E12">E12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E13" />
+                            <label   tabindex="1" for="E13">E13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="E14" />
+                            <label   tabindex="1" for="E14">E14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--6">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="F1" />
+                            <label   tabindex="1" for="F1">F1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F2" />
+                            <label   tabindex="1" for="F2">F2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F3" />
+                            <label   tabindex="1" for="F3">F3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="F4" />
+                            <label  for="F4">F4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F5" />
+                            <label   tabindex="1" for="F5">F5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F6" />
+                            <label   tabindex="1" for="F6">F6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F7" />
+                            <label   tabindex="1" for="F7">F7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F8" />
+                            <label   tabindex="1" for="F8">F8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F9" />
+                            <label   tabindex="1" for="F9">F9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F10" />
+                            <label   tabindex="1" for="F10">F10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F11" />
+                            <label   tabindex="1" for="F11">F11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F12" />
+                            <label   tabindex="1" for="F12">F12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F13" />
+                            <label   tabindex="1" for="F13">F13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="F14" />
+                            <label   tabindex="1" for="F14">F14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--7">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="G1" />
+                            <label   tabindex="1" for="G1">G1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G2" />
+                            <label   tabindex="1" for="G2">G2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G3" />
+                            <label   tabindex="1" for="G3">G3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="G4" />
+                            <label   for="G4">G4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G5" />
+                            <label   tabindex="1" for="G5">G5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G6" />
+                            <label   tabindex="1" for="G6">G6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G7" />
+                            <label   tabindex="1" for="G7">G7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G8" />
+                            <label   tabindex="1" for="G8">G8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G9" />
+                            <label   tabindex="1" for="G9">G9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G10" />
+                            <label   tabindex="1" for="G10">G10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G11" />
+                            <label   tabindex="1" for="G11">G11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G12" />
+                            <label   tabindex="1" for="G12">G12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G13" />
+                            <label   tabindex="1" for="G13">G13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="G14" />
+                            <label   tabindex="1" for="G14">G14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--9">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="H1" />
+                            <label   tabindex="1" for="H1">H1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H2" />
+                            <label   tabindex="1" for="H2">H2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H3" />
+                            <label   tabindex="1" for="H3">H3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="H4" />
+                            <label  for="H4">H4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H5" />
+                            <label   tabindex="1" for="H5">H5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H6" />
+                            <label   tabindex="1" for="H6">H6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H7" />
+                            <label   tabindex="1" for="H7">H7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H8" />
+                            <label   tabindex="1" for="H8">H8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H9" />
+                            <label   tabindex="1" for="H9">H9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H10" />
+                            <label   tabindex="1" for="H10">H10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H11" />
+                            <label   tabindex="1" for="H11">H11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H12" />
+                            <label   tabindex="1" for="H12">H12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H13" />
+                            <label   tabindex="1" for="H13">H13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="H14" />
+                            <label   tabindex="1" for="H14">H14</label>
+                        </li>
+                    </ol>
+                </li>
+                <li class="row row--10">
+                    <ol class="seats" type="A">
+                        <li class="seat">
+                            <input type="checkbox" id="I1" />
+                            <label   tabindex="1" for="I1">I1</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I2" />
+                            <label   tabindex="1" for="I2">I2</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I3" />
+                            <label   tabindex="1" for="I3">I3</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" disabled id="I4" />
+                            <label   for="I4">I4</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I5" />
+                            <label   tabindex="1" for="I5">I5</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I6" />
+                            <label   tabindex="1" for="I6">I6</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I7" />
+                            <label   tabindex="1" for="I7">I7</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I8" />
+                            <label   tabindex="1" for="I8">I8</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I9" />
+                            <label   tabindex="1" for="I9">I9</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I10" />
+                            <label   tabindex="1" for="I10">I10</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I11" />
+                            <label   tabindex="1" for="I11">I11</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I12" />
+                            <label   tabindex="1" for="I12">I12</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I13" />
+                            <label   tabindex="1" for="I13">I13</label>
+                        </li>
+                        <li class="seat">
+                            <input type="checkbox" id="I14" />
+                            <label   tabindex="1" for="I14">I14</label>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <button class="button" id="submit">SUBMIT</button>
+            <button class="button" id="cancel">CANCEL</button>
+        </div>
+
+        <div class="footer">
+            <footer>
+                <p style="color: white;">© 2024 My Website. All Rights Reserved.</p>
+                <nav>
+                    <a href="main.html">Home</a>
+                    <a target="_blank" href="https://it.wikipedia.org/wiki/Accessibilit%C3%A0_(web)">Wikipedia</a>
+                    <a target="_blank" href="https://www.claritergroup.com/">Clariter</a>
+                    <a target="_blank" href="https://www.w3.org/Translations/WCAG22-it/">Lista WCAG</a>
+                </nav>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
