@@ -31,7 +31,7 @@ document.getElementById('cancel').addEventListener('click', function() {
 
 function showPopup(msg) {
     document.getElementById('confirmationPopup').classList.remove('hidden');
-    document.getElementById('reservedSeatsMessage').innerHTML = "I posti "+msg
+    document.getElementById('reservedSeatsMessage').innerHTML = ""+msg
     setTimeout(() => {
         document.getElementById('confirmActionButton').focus();
     }, 100);
