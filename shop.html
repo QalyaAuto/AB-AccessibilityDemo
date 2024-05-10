@@ -86,16 +86,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--
-                    <div class="next-prev">
-                        <button id="prevBtn" class="next-prev-btn"><span class="fa-solid fa-circle-chevron-left"
-                                aria-label="freccia per elementi precedenti">&nbsp;&nbsp;</span>
-                        </button>
-                        <button id="nextBtn" class="next-prev-btn"><span
-                                class="fa-solid fa-circle-chevron-right"
-                                aria-label="freccia per elementi successivi">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>-->
                 </div>
                 <!--Second category of products-->
                 <div id="appliances">
@@ -148,16 +138,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--
-                    <div class="next-prev">
-                        <button id="prevBtn" class="next-prev-btn"><span class="fa-solid fa-circle-chevron-left"
-                                aria-label="freccia per elementi precedenti">&nbsp;&nbsp;</span>
-                        </button>
-                        <button id="nextBtn" class="next-prev-btn"><span
-                                class="fa-solid fa-circle-chevron-right"
-                                aria-label="freccia per elementi successivi">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>-->
                 </div>
                 <!--Third category of products-->
                 <div id="outdoor">
@@ -210,28 +190,18 @@
                             </div>
                         </div>
                     </div>
-                    <!--
-                                    <div class="next-prev">
-                                        <button id="prevBtn" class="next-prev-btn"><span class="fa-solid fa-circle-chevron-left"
-                                                aria-label="freccia per elementi precedenti">&nbsp;&nbsp;</span>
-                                        </button>
-                                        <button id="nextBtn" class="next-prev-btn"><span
-                                                class="fa-solid fa-circle-chevron-right"
-                                                aria-label="freccia per elementi successivi">&nbsp;&nbsp;</span>
-                                        </button>
-                                    </div>-->
                 </div>
             </div>
 
             <div class="basket">
                 <h2 class="basket-title">Carrello</h2>
                 <div class="basket-inner">
-                    <ul id="products-list">
+                    <span id="products-list">
                         <!-- Qui verranno aggiunti i prodotti -->
-                    </ul>
+                    </span>
                 </div>
                 <div class="results">
-                    <h2 class="total">Totale: <span id="total">0</span> €</h2>
+                    <span class="total">Totale: <span id="total">0</span> €</span>
                     <button onclick="alert('ACQUISTO ANDATO A BUON FINE!')" class="purchase">Acquista</button>
                 </div>
             </div>
@@ -256,35 +226,6 @@
             <a target="_blank" href="https://www.w3.org/Translations/WCAG22-it/">Lista WCAG</a>
         </nav>
     </footer>
-    <!--script for slider
-    <script>const sliderContainer = document.querySelector('.slider-container');
-        const cards = document.querySelectorAll('.card');
-
-        let currentIndex = 0;
-
-        function showCards() {
-            const cardWidth = cards[0].offsetWidth;
-            sliderContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        }
-
-        function nextSlide() {
-            const numCards = cards.length;
-            currentIndex = (currentIndex + 3) % numCards;
-            showCards();
-        }
-
-        function prevSlide() {
-            const numCards = cards.length;
-            currentIndex = (currentIndex - 3 + numCards) % numCards;
-            showCards();
-        }
-
-        // Aggiungi event listener per i pulsanti "Precedente" e "Successivo"
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('prevBtn').addEventListener('click', prevSlide);
-            document.getElementById('nextBtn').addEventListener('click', nextSlide);
-        });</script>
-    -->
 
 </body>
 
