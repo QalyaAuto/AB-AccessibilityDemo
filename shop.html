@@ -202,7 +202,15 @@
                 </div>
                 <div class="results">
                     <span class="total">Totale: <span id="total">0</span> €</span>
-                    <button onclick="alert('ACQUISTO ANDATO A BUON FINE!')" class="purchase">Acquista</button>
+                    <button class="purchase" id="acquista" aria-label="Completa l'acquisto">Acquista</button>
+                </div>
+                <div id="confirmationPopup" class="overlay hidden">
+                    <!-- Modal -->
+                    <div class="popup">
+                        <p id="purchaseMessage"></p>
+                        <button id="confirmActionButton" 
+                        class="button" onclick="confirmAction()" aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                    </div>
                 </div>
             </div>
 
