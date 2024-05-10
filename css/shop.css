@@ -63,6 +63,7 @@
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin: 20px;
+    font-weight: bold;
 }
 .results {
     overflow: auto;
