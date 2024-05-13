@@ -1,7 +1,8 @@
 function swapLocations() {
-    var from = document.getElementById('from');
-    var to = document.getElementById('to');
-    var temp = from.value;
-    from.value = to.value;
-    to.value = temp;
+  // Swapping the locations
+  var fromInput = document.getElementById('from');
+  var toInput = document.getElementById('to');
+  var tempLocation = fromInput.value;
+  fromInput.value = toInput.value;
+  toInput.value = tempLocation;
 }
