@@ -27,36 +27,33 @@
     position: relative;
 }
 
-.ticket-summary,
-.ticket-details {
+.ticket-summary {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ticket-route strong {
-    display: block;
+    display: block; /* Adjust as needed */
 }
 
-.ticket-times,
-.ticket-info,
-.ticket-price {
+.ticket-times, .ticket-info, .ticket-price {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
 }
 
 .detail-button, .pay-button {
-    background-color: #6C757D; /* Adjust the color to match your theme */
+    background-color: #663399; /* Adjust the color to match your theme */
     color: white;
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 .detail-button:hover, .pay-button:hover {
-    background-color: #5A6268;
+    background-color: #943399;
 }
 
 .hidden {
@@ -64,6 +61,7 @@
 }
 
 .ticket-details {
+    flex-direction: column;
     padding-top: 10px;
     border-top: 1px solid #eee;
 }

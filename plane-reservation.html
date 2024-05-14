@@ -84,38 +84,49 @@
                         </div>
                     </div>
                 </form>
-                <div id="resultSearch" class="hidden list">
+                <div id="resultSearch" class=" list">
                     <ul id="ticketList">
                         <li>
                             <div class="ticket-container">
                                 <div class="ticket-summary">
                                     <div class="ticket-route">
-                                        <span class="ticket-label">From</span>
-                                        <strong>BLR Kempegowda International</strong> to <strong>DEL Indira Gandhi
-                                            International</strong>
+                                        <span class="ticket-label">Da</span>
+                                        <strong>Roma Ciampino</strong> a <strong>Milano Malpensa</strong>
                                     </div>
+                                    <div class="ticket-departure">
+                                        <span><strong>Data:</strong> 12 Giugno</span>
+                                        <span><strong>Partenza:</strong> 6:20</span>
+                                    </div>
+                                    <button class="detail-button" onclick="toggleDetails(this)">Dettagli</button>
+                                </div>
+                                <div class="ticket-details hidden">
                                     <div class="ticket-times">
                                         <span>6:20 - 8:45</span>
                                         <span>2h 25 min</span>
-                                        <span>Boarding 5:35</span>
+                                        <span>Imbarco 5:35</span>
                                     </div>
                                     <div class="ticket-info">
                                         <span>No Transfer</span>
                                         <span>Gate 8</span>
-                                        <span>Seat 20A</span>
+                                        <span>Sedile 20A</span>
                                     </div>
                                     <div class="ticket-price">
-                                        <span>$100</span>
+                                        <span>100€</span>
                                         <span>Economy</span>
                                     </div>
-                                    <button class="detail-button" onclick="toggleDetails(this)">Details</button>
-                                </div>
-                                <div class="ticket-details hidden">
-                                    <button class="pay-button">Pay</button>
+                                    <button class="pay-button" onclick="showPopup()">Prenota</button>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div id="confirmationPopup" class="overlay hidden">
+                    <!-- Modal -->
+                    <div class="popup">
+                        <p id="payButtonMessage">Hai Prenotato il tuo biglietto aereo</p>
+                        <button id="confirmActionButton" 
+                        class="button" onclick="closePopup()" aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                    </div>
                 </div>
             </main>
             <div class="footer">
