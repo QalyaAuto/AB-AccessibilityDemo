@@ -7,6 +7,7 @@
     <title>Prenota Aereo</title>
     <link rel="stylesheet" type="text/css" href="css\main.css">
     <link rel="stylesheet" type="text/css" href="css\plane.css">
+    <link rel="stylesheet" type="text/css" href="css\plane-tickets.css">
     <script src="https://kit.fontawesome.com/3401cdb452.js" crossorigin="anonymous"></script>
 </head>
 
@@ -78,20 +79,41 @@
                             <input type="checkbox" id="departureOnlyFlights" name="departureOnlyFlights">
                         </div>
                         <div>
-                            <button type="submit" aria-label="Cerca il tuo volo">Cerca</button>
+                            <button type="submit" onclick="toggleTicketList()"
+                                aria-label="Cerca il tuo volo">Cerca</button>
                         </div>
                     </div>
                 </form>
                 <div id="resultSearch" class="hidden list">
                     <ul id="ticketList">
                         <li>
-                            1
-                        </li>
-                        <li>
-                            2
-                        </li>
-                        <li>
-                            3
+                            <div class="ticket-container">
+                                <div class="ticket-summary">
+                                    <div class="ticket-route">
+                                        <span class="ticket-label">From</span>
+                                        <strong>BLR Kempegowda International</strong> to <strong>DEL Indira Gandhi
+                                            International</strong>
+                                    </div>
+                                    <div class="ticket-times">
+                                        <span>6:20 - 8:45</span>
+                                        <span>2h 25 min</span>
+                                        <span>Boarding 5:35</span>
+                                    </div>
+                                    <div class="ticket-info">
+                                        <span>No Transfer</span>
+                                        <span>Gate 8</span>
+                                        <span>Seat 20A</span>
+                                    </div>
+                                    <div class="ticket-price">
+                                        <span>$100</span>
+                                        <span>Economy</span>
+                                    </div>
+                                    <button class="detail-button" onclick="toggleDetails(this)">Details</button>
+                                </div>
+                                <div class="ticket-details hidden">
+                                    <button class="pay-button">Pay</button>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
