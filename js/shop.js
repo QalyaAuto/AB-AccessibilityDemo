@@ -23,7 +23,7 @@ function aggiungiProdotto(nome, prezzo) {
   totaleElemento.textContent = (totaleAttuale + prezzo).toFixed(2);
 }
 
-//Event Listener Acquista
+// Event Listener Acquista
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#acquista').addEventListener('click', function () {
     showPopup("ACQUISTO ANDATO A BUON FINE!");
@@ -32,7 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function showPopup(msg) {
   document.getElementById('confirmationPopup').classList.remove('hidden');
-  document.getElementById('purchaseMessage').innerHTML = "" + msg
+  document.getElementById('purchaseMessage').innerHTML = "" + msg;
+
+  // Disabilita tab per tutti gli elementi tranne il bottone di conferma
+  disableTabForAllExcept(document.getElementById('confirmActionButton'));
+
   setTimeout(() => {
     document.getElementById('confirmActionButton').focus();
   }, 100);
@@ -40,23 +44,32 @@ function showPopup(msg) {
 
 function confirmAction() {
   document.getElementById('confirmationPopup').classList.add('hidden');
+  enableTabForAll();
+
+  // Altre azioni da eseguire dopo la conferma
 }
-function showModal() {
-  var modal = document.getElementById("confirmationPopup");
-  modal.classList.remove("hidden");
+
+function disableTabForAllExcept(element) {
+  const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
+  focusableElements.forEach(el => {
+    if (el !== element) {
+      el.setAttribute('tabindex', '-1');
+    }
+  });
+}
+
+function enableTabForAll() {
+  const focusableElements = document.querySelectorAll('[tabindex="-1"]');
+  focusableElements.forEach(el => {
+    el.removeAttribute('tabindex');
+  });
 }
 
 // Function to close the modal
 function hideModal() {
   var modal = document.getElementById("confirmationPopup");
   modal.classList.add("hidden");
-}
-
-// Function to handle confirm action
-function confirmAction() {
-  var modal = document.getElementById("confirmationPopup");
-  // Your code to handle confirm action here
-  hideModal();
+  enableTabForAll();
 }
 
 // When the user presses the ESC key, close the modal
