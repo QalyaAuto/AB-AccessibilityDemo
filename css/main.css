@@ -25,7 +25,7 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 /* Styling for the header */
@@ -65,11 +65,13 @@ p {
 }
 
 #page-container {
-    height: 65vh;
-    justify-content: center;
-    align-items: center;
-    padding-top: 7%;
+    height: 66vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center
 }
+
 
 .button:hover, .button:focus {
     background-color: rgb(21, 45, 70); /* Darker blue on hover/focus */
