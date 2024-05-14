@@ -9,29 +9,25 @@
     <link rel="stylesheet" type="text/css" href="css\cinema.css">
     <script src="https://kit.fontawesome.com/3401cdb452.js" crossorigin="anonymous"></script>
 </head>
+<header>
+    <div class="top command">
+        <a href=main.html class="backButton">
+            <span class="fa-solid fa-circle-chevron-left"
+                aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
+            Indietro
+        </a>
+    </div>
+    <!-- Top Page -->
+    <div class="top page">
+        <h1 id="top">Pagina per la simulazione di Prenotazione biglietto del cinema</h1>
+        <p>Esempio di accessibilita' sull'accessibilità all'interno della sezione di selezione poltrone di
+            un
+            cinema</p>
+    </div>
+</header>
 
 <body>
-    <div id="page-container">
-
         <div class="cinema padding">
-
-            <!-- Go Back button -->
-            <header>
-                <div class="top command">
-                    <a href=main.html class="backButton">
-                        <span class="fa-solid fa-circle-chevron-left"
-                            aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
-                        Indietro
-                    </a>
-                </div>
-                <!-- Top Page -->
-                <div class="top page">
-                    <h1 id="top">Pagina per la simulazione di Prenotazione biglietto del cinema</h1>
-                    <p>Esempio di accessibilita' sull'accessibilità all'interno della sezione di selezione poltrone di
-                        un
-                        cinema</p>
-                </div>
-            </header>
             <!-- CINEMA SEATS   -->
             <main>
                 <div class="screen">
@@ -531,8 +527,8 @@
                         <!-- Modal -->
                         <div class="popup">
                             <p id="reservedSeatsMessage"></p>
-                            <button id="confirmActionButton" 
-                            class="button" onclick="confirmAction()" aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                            <button id="confirmActionButton" class="button" onclick="confirmAction()"
+                                aria-label="Chiudi messaggio di conferma">CONFERMA</button>
                         </div>
                     </div>
                 </div>
@@ -551,7 +547,6 @@
         </div>
 
         <script src="js\cinema.js"></script>
-    </div>
 </body>
 
 </html>
