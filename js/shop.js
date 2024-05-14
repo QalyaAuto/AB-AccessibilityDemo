@@ -41,3 +41,27 @@ function showPopup(msg) {
 function confirmAction() {
   document.getElementById('confirmationPopup').classList.add('hidden');
 }
+function showModal() {
+  var modal = document.getElementById("confirmationPopup");
+  modal.classList.remove("hidden");
+}
+
+// Function to close the modal
+function hideModal() {
+  var modal = document.getElementById("confirmationPopup");
+  modal.classList.add("hidden");
+}
+
+// Function to handle confirm action
+function confirmAction() {
+  var modal = document.getElementById("confirmationPopup");
+  // Your code to handle confirm action here
+  hideModal();
+}
+
+// When the user presses the ESC key, close the modal
+window.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    hideModal();
+  }
+});

@@ -1,0 +1,98 @@
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    padding: 8px;
+    margin: 5px;
+    min-width: 200px;
+    /* Adjusted width to match across all input types */
+    max-width: 500px;
+    width: 95%;
+    /* This makes inputs responsive and fills the container */
+}
+
+button {
+    background-color: #663399;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: auto;
+    /* Allow the button to size according to its content */
+    display: block;
+    /* This will place the button on a new line */
+}
+
+i {
+    color: #663399;
+}
+
+button:hover,
+button:focus {
+    background-color: #943399;
+}
+
+#bookingForm {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#travelLocationAndDates,
+#travelDetails {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+legend {
+    padding: 0 10px;
+    color: #5D5D5D;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Align checkboxes with their labels */
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+    vertical-align: middle; /* Aligns checkbox vertically with the text */
+}
+
+/* Responsive adjustments for inline display of form elements */
+@media (min-width: 1500px) {
+    .form-row {
+        display: flex;
+        align-items: center;
+        height: 4em;
+    }
+
+    .form-row label,
+    .form-row input,
+    .form-row button,
+    .form-row select {
+        border-radius: 15px;
+        margin-right: 20px;
+        /* Ensure consistent spacing between form elements */
+    }
+    
+    .form-row input {
+        flex: 1;
+    }
+    .form-row button {
+        flex-grow: 0.05;
+    }
+}
