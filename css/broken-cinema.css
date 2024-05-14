@@ -106,7 +106,6 @@ html {
     width: 100%;
     text-align: center;
     font-size: 14px;
-    font-weight: bold;
     line-height: 1.5rem;
     padding: 4px 0;
     animation-duration: 300ms;
@@ -115,7 +114,7 @@ html {
     /* Rounded top and flat bottom */
     padding-top: 10px;
     /* More padding at the top to simulate backrest */
-    background: linear-gradient(to bottom, #66b3ff 0%, #2a5cff 100%);
+    background: linear-gradient(to bottom, #a3b2c1 0%, #f4f6ff 100%);
     /* Gradient for a plush look */
   }
   

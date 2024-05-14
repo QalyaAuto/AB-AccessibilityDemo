@@ -60,22 +60,3 @@ function enableTabForAll() {
     });
 }
 
-// Function to show the modal
-function showModal() {
-    var modal = document.getElementById("confirmationPopup");
-    modal.classList.remove("hidden");
-}
-
-// Function to close the modal
-function hideModal() {
-    var modal = document.getElementById("confirmationPopup");
-    modal.classList.add("hidden");
-    enableTabForAll();
-}
-
-// When the user presses the ESC key, close the modal
-window.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        hideModal();
-    }
-});
