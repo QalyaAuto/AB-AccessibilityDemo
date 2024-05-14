@@ -1,99 +1,135 @@
 .div-main {
-    width:100%;
-    overflow:auto;
-  }
-.products{
-    width:60%;
-    float:left;
+    width: 100%;
+    overflow: auto;
 }
-.basket{
+
+.products {
+    width: 60%;
+    float: left;
+}
+
+.basket {
     width: 30%;
     position: fixed;
     top: 5px;
-    right:50px;
-    float:right;
+    right: 50px;
+    float: right;
     padding: 10px 30px;
-    background: linear-gradient(to bottom right, #663399 50%, #2100c8 100%); /* Blue background */
+    background: linear-gradient(to bottom right, #663399 50%, #2100c8 100%);
+    /* Blue background */
     color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 16px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 16px;
+    /* Larger font size */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: solid 3px white;
+    /* White border around the button */
     text-align: left;
     transition: background-color 0.3s, box-shadow 0.3s;
-    
+
 }
 
-.basket-inner{
+.basket-inner {
     min-height: 40px;
-    max-height:430px ;
-    overflow:auto;
-    margin:25px 24px 0;
-    padding-right:2px;
+    max-height: 430px;
+    overflow: auto;
+    margin: 25px 24px 0;
+    padding-right: 2px;
 }
 
-.basket-title{
+.basket-title {
     padding: 10px 30px;
-    background-color: white; /* Blue background */
+    background-color: white;
+    /* Blue background */
     color: #2100c8;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 22px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 22px;
+    /* Larger font size */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: solid 3px white;
+    /* White border around the button */
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin: 20px;
 }
-.total{
-    width:40%;
-    float:left;
+
+.total {
+    width: 40%;
+    float: left;
     padding: 10px;
-    background-color: white; /* Blue background */
+    background-color: white;
+    /* Blue background */
     color: #2100c8;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 22px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 22px;
+    /* Larger font size */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: solid 3px white;
+    /* White border around the button */
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin: 20px;
     font-weight: bold;
 }
+
 .results {
     overflow: auto;
-    
-  }
-.purchase{
-    width:30%;
-    float:right;
+
+}
+
+.purchase {
+    width: 30%;
+    float: right;
     padding: 10px;
-    background-color: #663399; /* Blue background */
+    background-color: #663399;
+    /* Blue background */
     color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 22px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 4px white; /* White border around the button */
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 22px;
+    /* Larger font size */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: solid 4px white;
+    /* White border around the button */
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin: 20px;
     font-weight: lighter;
 }
+
 .slider {
     width: 100%;
     overflow: hidden;
 }
+
 .slider-container {
     display: flex;
     transition: transform 0.5s ease;
 }
+
 .card {
     width: 30%;
     flex-shrink: 0;
@@ -103,65 +139,74 @@
     padding: 10px;
 }
 
-.next-prev{
-    width:100%;
-    overflow:auto;
+.next-prev {
+    width: 100%;
+    overflow: auto;
     text-align: center;
-    padding:10px;
+    padding: 10px;
 }
 
-.addtocart-button{
+.addtocart-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #663399;
     color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 15px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 15px;
+    /* Larger font size */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: solid 3px white;
+    /* White border around the button */
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
     font-weight: lighter;
     transition: transform 0.2s ease;
 
 }
-.addtocart-button:active{
+
+.addtocart-button:active {
     transform: scale(0.96);
 }
 
 
-.next-prev-btn{
+.next-prev-btn {
     border: 0;
     display: inline-block;
-    color:  #663399;
+    color: #663399;
     font-size: 40px;
     background-color: transparent;
-    padding:0%;
+    padding: 0%;
     border: none;
-    box-shadow:none;
+    box-shadow: none;
 }
 
-button{
+button {
     background-color: white;
-    color:#2100c8;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 14px; /* Larger font size */
+    color: #2100c8;
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 14px;
+    /* Larger font size */
     border-radius: 30px;
     border: solid 3px white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     font-weight: bold;
 }
 
-li{
-    list-style-type:none;
+li {
+    list-style-type: none;
     margin: 15px;
     font-size: 20px;
     font-weight: bold;
 }
 
-.fixed{
+.fixed {
     bottom: 0;
     right: 0;
     position: fixed;
@@ -169,41 +214,54 @@ li{
     padding: 20px;
 }
 
-.fixed-basket-btn{
+.fixed-basket-btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #2100c8;
     color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 20px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 20px;
+    /* Larger font size */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: solid 3px white;
+    /* White border around the button */
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.category-search{
+.category-search {
     padding: 10px;
-    background-color: #d6bdef; /* Blue background */
-    color:black;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 17px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 2px white; /* White border around the button */
+    background-color: #d6bdef;
+    /* Blue background */
+    color: black;
+    font-family: Arial, sans-serif;
+    /* Simple sans-serif font */
+    font-size: 17px;
+    /* Larger font size */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: solid 2px white;
+    /* White border around the button */
     text-align: left;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin: 20px;
     font-weight: lighter;
 }
 
-a{
+a {
     font-weight: bold;
     margin: 10px;
-    color:black;
+    color: black;
 }
 
 .overlay {
@@ -219,27 +277,26 @@ a{
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
-  }
-  
-  .overlay:not(.hidden) {
+}
+
+.overlay:not(.hidden) {
     visibility: visible;
     opacity: 1;
-  }
-  
-  .popup {
+}
+
+.popup {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .popup p {
+}
+
+.popup p {
     margin-top: 0;
-  }
-  
-  .popup button {
+}
+
+.popup button {
     margin: 10px;
     padding: 10px 20px;
-  }
-  
+}
