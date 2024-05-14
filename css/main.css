@@ -60,6 +60,8 @@ p {
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
+    font-family: Verdana, Tahoma, sans-serif;
     
     
 }
@@ -80,6 +82,17 @@ p {
 
 footer {
     position: relative;       ;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #2100c8;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-main {
+    position: absolute;       ;
     right: 0;
     bottom: 0;
     left: 0;
