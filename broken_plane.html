@@ -6,29 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenota Aereo</title>
     <link rel="stylesheet" type="text/css" href="css\main.css">
-    <link rel="stylesheet" type="text/css" href="css\plane.css">
+    <link rel="stylesheet" type="text/css" href="css\broken-plane.css">
     <link rel="stylesheet" type="text/css" href="css\plane-tickets.css">
     <script src="https://kit.fontawesome.com/3401cdb452.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-color: #eee;
-            color: #b4aaaa;
-        }
-        input, button, select {
-            outline: none;
-            color: blueviolet;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 
 <header>
     <div class="top command">
         <a href=main.html tabindex="0" class="backButton">
-            <span class="fa-solid fa-circle-chevron-left"
-                aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
+            <span class="fa-solid fa-circle-chevron-left" tabindex="5"></span>
             Indietro
         </a>
     </div>
@@ -44,42 +30,39 @@
 <body>
     <!-- Go Back button -->
     <main class="padding">
-        <form id="bookingForm" aria-label="Form di selezione biglietti e date del viaggio aereo">
-            <div id="travelLocationAndDates" class="form-row">
+        <form id="bookingForm">
+            <div id="travelLocationAndDates" tabindex="2" class="form-row">
                 <i class="fa fa-plane-departure">&nbsp;&nbsp;</i>
                 <label for="from">Partenza da:</label>
-                <input type="text" id="from" name="from" required 
-                    aria-label="Aereoporto di partenza">
+                <input type="text" id="from" name="from" required >
                 <i class="fa-solid fa-plane-arrival">&nbsp;&nbsp;</i>
                 <label for="to">Arrivo a:</label>
-                <input type="text" id="to" name="to" required  aria-label="Aereoporto di arrivo">
-                <button type="button" aria-label="Scambia i valori di partenza e arrivo"
-                    onclick="swapLocations()">Scambia</button>
+                <input type="text" id="to" name="to" required >
+                <button type="button" onclick="swapLocations()">Scambia</button>
                 <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
                 <label for="departureDate">Data di partenza:</label>
-                <input type="date" id="departureDate" name="departureDate" required 
-                    aria-label="Data di partenza">
+                <input type="date" id="departureDate" name="departureDate" required >
                 <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
                 <label for="returnDate">Data di Ritorno:</label>
-                <input type="date" id="returnDate" name="returnDate" aria-label="Data di ritorno">
+                <input type="date" id="returnDate" name="returnDate" >
             </div>
-            <div id="travelDetails">
+            <div id="travelDetails" tabindex="1">
                 <fieldset class="form-row">
                     <legend>Classe e viaggiatori</legend>
                     <label for="adults">Numero adulti:</label>
-                    <input type="number" id="adults" name="adults" min="1" value="1" aria-label="Numero adulti">
+                    <input type="number" id="adults" name="adults" min="1" value="1" >
                     <label for="children">Numero bambini:</label>
-                    <input type="number" id="children" name="children" min="0" value="0" aria-label="Numero bambini">
+                    <input type="number" id="children" name="children" min="0" value="0" >
                     <label for="seatType">Tipo Seduta:</label>
-                    <select id="seatType" name="seatType" aria-label="Lista per la classe di prenotazione">
-                        <option value="economy" aria-label="Economy">Economy</option>
-                        <option value="premium" aria-label="Premium">Premium</option>
-                        <option value="business" aria-label="Business">Business</option>
-                        <option value="first" aria-label="Prima Classe">Prima Classe</option>
+                    <select id="seatType" name="seatType" >
+                        <option value="economy" >Economy</option>
+                        <option value="premium" >Premium</option>
+                        <option value="business" >Business</option>
+                        <option value="first" >Prima Classe</option>
                     </select>
                 </fieldset>
             </div>
-            <div id="submitAndRestriction" class="form-row">
+            <div id="submitAndRestriction" tabindex="0" class="form-row">
                 <div>
                     <label for="directFlights">Solo diretti</label>
                     <input type="checkbox" id="directFlights" name="directFlights">
@@ -89,11 +72,11 @@
                     <input type="checkbox" id="departureOnlyFlights" name="departureOnlyFlights">
                 </div>
                 <div>
-                    <button type="submit" onclick="toggleTicketList()" aria-label="Cerca il tuo volo">Cerca</button>
+                    <button type="submit" onclick="toggleTicketList()">Cerca</button>
                 </div>
             </div>
         </form>
-        <div id="resultSearch" class="hidden list">
+        <div id="resultSearch" tabindex="6" class="hidden list">
             <ul id="ticketList">
                 <!-- 1st Ticket -->
                 <li>
@@ -102,15 +85,13 @@
                             <div class="ticket-route">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
-                                            Ciampino</p>
+                                        <p style="font-weight: bolder;">Roma Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <i class="fas fa-plane-departure animated-icon"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
-                                            Malpensa</p>
+                                        <p style="font-weight: bolder;">Milano Malpensa</p>
                                     </span>
                                 </div>
                             </div>
@@ -146,14 +127,14 @@
                             <div class="ticket-route">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
+                                        <p style="font-weight: bolder;">Roma
                                             Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <i class="fas fa-plane-departure animated-icon"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
+                                        <p style="font-weight: bolder;">Milano
                                             Malpensa</p>
                                     </span>
                                 </div>
@@ -190,14 +171,14 @@
                             <div class="ticket-route">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
+                                        <p style="font-weight: bolder;">Roma
                                             Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <i class="fas fa-plane-departure animated-icon"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
+                                        <p style="font-weight: bolder;">Milano
                                             Malpensa</p>
                                     </span>
                                 </div>
@@ -233,8 +214,7 @@
             <!-- Modal -->
             <div class="popup">
                 <p id="payButtonMessage">Hai Prenotato il tuo biglietto aereo</p>
-                <button id="confirmActionButton" class="button" onclick="closePopup()"
-                    aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                <button id="confirmActionButton" class="button" onclick="closePopup()">CONFERMA</button>
             </div>
         </div>
     </main>
@@ -249,7 +229,7 @@
             </nav>
         </footer>
     </div>
-    <script src="js\plane.js"></script>
+    <script src="js\broken-plane.js"></script>
 </body>
 
 </html>
