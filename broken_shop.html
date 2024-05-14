@@ -1,2 +1,266 @@
 <!DOCTYPE html>
-<h1>E' TUTTO ROTTOOOOOOOO</h1>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="stylesheet" type="text/css" href="css\shop.css">
+    <script src="js\broken_shop.js"></script>
+    <script src="https://kit.fontawesome.com/3401cdb452.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="padding">
+
+        <!-- Go Back button -->
+        <div class="top command">
+            <a href="main.html" class="backButton" id="backButton" tabindex="63">
+                <span class="fa-solid fa-circle-chevron-left"
+                    aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
+                Indietro
+            </a>
+        </div>
+
+        <!-- Top Page -->
+        <div class="top page">
+            <h1 id="top" tabindex="64">Shop</h1>
+            <p tabindex="65">Esempio di accessibilita' sull'utilizzo di uno shop</p>
+        </div>
+
+        <div class="div-main">
+            <div class="products">
+                <div class="category-search" tabindex="66">
+                    Vai alla categoria: <a href="#forniture" tabindex="67">Mobili</a>-<a href="#appliances"
+                        tabindex="6">Elettrodomestici</a>-<a href="#outdoor" tabindex="7">Esterni</a>
+                </div>
+
+                <!--First category of products-->
+                <div id="forniture" tabindex="8">
+                    <h2>Categoria : Mobili</h2>
+                    <div class="slider">
+                        <div class="slider-container">
+                            <div class="card" tabindex="9"><img src="assets\images\shop-images\lavabo.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Lavandino"><br>
+                                <figcaption>Lavandino da Cucina - 51,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Lavandino', 0.00)"
+                                    tabindex="10">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="11"><img src="assets\images\shop-images\attaccapanni.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Attaccapanni"><br>
+                                <figcaption>Attaccapanni da interno - 20,89€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Attaccapanni', 20.89)"
+                                    tabindex="12">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="13"><img src="assets\images\shop-images\comodino.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Comodino"><br>
+                                <figcaption>Comodino da camera - 35,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Comodino', 35.99)"
+                                    tabindex="14">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="card" tabindex="15"><img src="assets\images\shop-images\scarpiera.jpg"
+                                    style="width:250px;height:200px;" alt="Foto scarpiera"><br>
+                                <figcaption>Scarpiera - 22,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Scarpiera', 22.99)"
+                                    tabindex="16">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="17"><img src="assets\images\shop-images\letto.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Letto"><br>
+                                <figcaption>Struttura Letto - 250€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Letto', 250)"
+                                    tabindex="18">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="19"><img src="assets/images/shop-images/mensola.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Mensola"><br>
+                                <figcaption>Mensola a muro - 30,89€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Mensola', 30.89)"
+                                    tabindex="20">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="card" tabindex="21"><img src="assets\images\shop-images\mobiletv.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Mobile TV"><br>
+                                <figcaption>Mobile TV in Legno - 60,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Mobile TV', 60.99)"
+                                    tabindex="22">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="23"><img src="assets\images\shop-images\poltrona.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Poltrona"><br>
+                                <figcaption>Poltrona da soggiorno - 110€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Poltrona', 110)"
+                                    tabindex="24">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Second category of products-->
+                <div id="appliances" tabindex="25">
+                    <h2>Categoria : Elettrodomestici</h2>
+                    <div class="slider">
+                        <div class="slider-container">
+                            <div class="card" tabindex="26"><img src="assets\images\shop-images\friggitrice.jpg"
+                                    style="width:250px;height:200px;" alt="Foto friggitrice ad aria"><br>
+                                <figcaption>Friggitrice ad aria - 70,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Friggitrice', 70.99)"
+                                    tabindex="27">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="28"><img src="assets\images\shop-images\frigorifero.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Frigorifero"><br>
+                                <figcaption>Frigorifero grigio - 399,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Frigorifero', 399.99)"
+                                    tabindex="29">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="30"><img src="assets\images\shop-images\microonde.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Microonde"><br>
+                                <figcaption>Microonde di piccole dimensioni - 40,79€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Microonde', 40.79)"
+                                    tabindex="31">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="card" tabindex="32"><img src="assets\images\shop-images\lavastoviglie.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Lavastoviglie"><br>
+                                <figcaption>Lavastoviglie da incasso - 599,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Lavastoviglie', 599.99)"
+                                    tabindex="33">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="34"><img src="assets\images\shop-images\forno.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Forno"><br>
+                                <figcaption>Forno con piano cottura - 239€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Forno', 239)"
+                                    tabindex="35">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="36"><img src="assets\images\shop-images\aspirapolvere.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Aspirapolvere"><br>
+                                <figcaption>Aspirapolvere - 80,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Aspirapolvere', 80.99)"
+                                    tabindex="37">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="card" tabindex="38"><img src="assets\images\shop-images\lavatrice.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Lavatrice"><br>
+                                <figcaption>Lavatrice Portata 8kg - 399,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Lavatrice', 399.99)"
+                                    tabindex="39">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="40"><img src="assets\images\shop-images\tv.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Televisore"><br>
+                                <figcaption>Televisore Full HD 4k - 1099,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Televisore', 1099.99)"
+                                    tabindex="41">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Third category of products-->
+                <div id="outdoor" tabindex="42">
+                    <h2>Categoria : Esterni</h2>
+                    <div class="slider">
+                        <div class="slider-container">
+                            <div class="card" tabindex="43"><img src="assets\images\shop-images\amaca.jpg"
+                                    style="width:250px;height:200px;" alt="Foto amaca"><br>
+                                <figcaption>Amaca - 49,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Amaca', 49.99)"
+                                    tabindex="44">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="45"><img src="assets\images\shop-images\ombrellone.jpg"
+                                    style="width:250px;height:200px;" alt="Foto ombrellone"><br>
+                                <figcaption>Ombrellone da giardino - 25,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Ombrellone', 25.99)"
+                                    tabindex="46">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="47"><img src="assets\images\shop-images\bbq.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Barbeque"><br>
+                                <figcaption>Barbeque circolare - 30€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('BBQ', 30)"
+                                    tabindex="48">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="card" tabindex="49"><img src="assets\images\shop-images\piscinetta.jpg"
+                                    style="width:250px;height:200px;" alt="Foto piscinetta"><br>
+                                <figcaption>Piscina gonfiabile quadrata - 37,99€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Piscina', 37.99)"
+                                    tabindex="50">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="51"><img src="assets\images\shop-images\sdraio.jpg"
+                                    style="width:250px;height:200px;" alt="Foto Sdraio"><br>
+                                <figcaption>Sdraio - <span style="text-decoration: line-through;">19,99</span> 9,99€<br>
+                                    <b>OFFERTA</b></figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Sdraio', 9.99)"
+                                    tabindex="52">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="53"><img src="assets\images\shop-images\tavolo.jpg"
+                                    style="width:250px;height:200px;" alt="Foto tavolo da esterno"><br>
+                                <figcaption>Tavolo in legno circolare - 31,00€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Tavolo circolare', 31)"
+                                    tabindex="54">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="card" tabindex="55"><img src="assets\images\shop-images\vaso.jpeg"
+                                    style="width:250px;height:200px;" alt="Foto vaso"><br>
+                                <figcaption>Vaso da esterno piccolo - 16,95€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Vaso esterno', 16.95)"
+                                    tabindex="56">Aggiungi al carrello</button><br>
+                            </div>
+                            <div class="card" tabindex="57"><img src="assets\images\shop-images\sedia-esterno.jpg"
+                                    style="width:250px;height:200px;" alt="Foto sedia esterno"><br>
+                                <figcaption>Sedia sdraio da esterno - 11,00€</figcaption>
+                                <button class="addtocart-button" onclick="aggiungiProdotto('Sedia sdraio', 11)"
+                                    tabindex="58">Aggiungi al carrello</button><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basket" tabindex="59">
+                <h2 class="basket-title">Carrello</h2>
+                <div class="basket-inner">
+                    <span id="products-list">
+                        <!-- Qui verranno aggiunti i prodotti -->
+                    </span>
+                </div>
+                <div class="results">
+                    <span class="total">Totale: <span id="total">0</span> €</span>
+                    <button class="purchase" id="acquista" aria-label="Completa l'acquisto"
+                        tabindex="60">Acquista</button>
+                </div>
+                <div id="confirmationPopup" class="overlay hidden" tabindex="61">
+                    <!-- Modal -->
+                    <div class="popup">
+                        <p id="purchaseMessage"></p>
+                        <button id="confirmActionButton" class="button" onclick="confirmAction()"
+                            aria-label="Chiudi messaggio di conferma" tabindex="62">CONFERMA</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <p style="color: white;" tabindex="1">© 2024 My Website. All Rights Reserved.</p>
+        <nav>
+            <a href="main.html" tabindex="2">Home</a>
+            <a target="_blank" href="https://it.wikipedia.org/wiki/Accessibilit%C3%A0_(web)" tabindex="4">Wikipedia</a>
+            <a target="_blank" href="https://www.claritergroup.com/" tabindex="3">Clariter</a>
+            <a target="_blank" href="https://www.w3.org/Translations/WCAG22-it/" tabindex="5">Lista WCAG</a>
+        </nav>
+    </footer>
+
+    <div class="fixed" tabindex="68">
+        <a href="#backButton" class="fixed-basket-btn" tabindex="69">
+            <span class="fa-solid fa-circle-chevron-up"
+                aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
+            Torna su
+        </a>
+    </div>
+</body>
+
+</html>
