@@ -84,38 +84,143 @@
                         </div>
                     </div>
                 </form>
-                <div id="resultSearch" class="hidden list">
+                <div id="resultSearch" class=" list">
                     <ul id="ticketList">
+                        <!-- 1st Ticket -->
                         <li>
                             <div class="ticket-container">
                                 <div class="ticket-summary">
                                     <div class="ticket-route">
-                                        <span class="ticket-label">From</span>
-                                        <strong>BLR Kempegowda International</strong> to <strong>DEL Indira Gandhi
-                                            International</strong>
+                                        <div class="route-section">
+                                            <span class="route-text">
+                                                <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
+                                            </span>
+                                            <div class="route-icon">
+                                                <i class="fas fa-plane-departure animated-icon"></i>
+                                            </div>
+                                            <span class="route-text">
+                                                <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
+                                            </span>
+                                        </div>
                                     </div>
+                                    <div class="ticket-departure">
+                                        <span><strong>Data:</strong> 12 Giugno</span>
+                                        <span><strong>Partenza:</strong> 6:20</span>
+                                    </div>
+                                    <button class="ticket-button" onclick="toggleDetails(this)">Dettagli</button>
+                                </div>
+                                <div class="ticket-details hidden">
                                     <div class="ticket-times">
                                         <span>6:20 - 8:45</span>
                                         <span>2h 25 min</span>
-                                        <span>Boarding 5:35</span>
+                                        <span>Imbarco 5:35</span>
                                     </div>
                                     <div class="ticket-info">
                                         <span>No Transfer</span>
                                         <span>Gate 8</span>
-                                        <span>Seat 20A</span>
+                                        <span>Sedile 20A</span>
                                     </div>
                                     <div class="ticket-price">
-                                        <span>$100</span>
+                                        <span>100€</span>
                                         <span>Economy</span>
                                     </div>
-                                    <button class="detail-button" onclick="toggleDetails(this)">Details</button>
+                                    <button class="ticket-button" onclick="showPopup()">Prenota</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 2nd Ticket -->
+                        <li>
+                            <div class="ticket-container">
+                                <div class="ticket-summary">
+                                    <div class="ticket-route">
+                                        <div class="route-section">
+                                            <span class="route-text">
+                                                <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
+                                            </span>
+                                            <div class="route-icon">
+                                                <i class="fas fa-plane-departure animated-icon"></i>
+                                            </div>
+                                            <span class="route-text">
+                                                <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-departure">
+                                        <span><strong>Data:</strong> 12 Giugno</span>
+                                        <span><strong>Partenza:</strong> 8:24</span>
+                                    </div>
+                                    <button class="ticket-button" onclick="toggleDetails(this)">Dettagli</button>
                                 </div>
                                 <div class="ticket-details hidden">
-                                    <button class="pay-button">Pay</button>
+                                    <div class="ticket-times">
+                                        <span>8:24 - 10:49</span>
+                                        <span>2h 25 min</span>
+                                        <span>Imbarco 7:50</span>
+                                    </div>
+                                    <div class="ticket-info">
+                                        <span>No Transfer</span>
+                                        <span>Gate 8</span>
+                                        <span>Sedile 18B</span>
+                                    </div>
+                                    <div class="ticket-price">
+                                        <span>95€</span>
+                                        <span>Economy</span>
+                                    </div>
+                                    <button class="ticket-button" onclick="showPopup()">Prenota</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 3rd Ticket -->
+                        <li>
+                            <div class="ticket-container">
+                                <div class="ticket-summary">
+                                    <div class="ticket-route">
+                                        <div class="route-section">
+                                            <span class="route-text">
+                                                <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
+                                            </span>
+                                            <div class="route-icon">
+                                                <i class="fas fa-plane-departure animated-icon"></i>
+                                            </div>
+                                            <span class="route-text">
+                                                <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-departure">
+                                        <span><strong>Data:</strong> 12 Giugno</span>
+                                        <span><strong>Partenza:</strong> 6:20</span>
+                                    </div>
+                                    <button class="ticket-button" onclick="toggleDetails(this)">Dettagli</button>
+                                </div>
+                                <div class="ticket-details hidden">
+                                    <div class="ticket-times">
+                                        <span>12:00 - 13:25</span>
+                                        <span>2h 25 min</span>
+                                        <span>Imbarco 11:30</span>
+                                    </div>
+                                    <div class="ticket-info">
+                                        <span>No Transfer</span>
+                                        <span>Gate 8</span>
+                                        <span>Sedile 20A</span>
+                                    </div>
+                                    <div class="ticket-price">
+                                        <span>250€</span>
+                                        <span>Prima Classe</span>
+                                    </div>
+                                    <button class="ticket-button" onclick="showPopup()">Prenota</button>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div id="confirmationPopup" class="overlay hidden">
+                    <!-- Modal -->
+                    <div class="popup">
+                        <p id="payButtonMessage">Hai Prenotato il tuo biglietto aereo</p>
+                        <button id="confirmActionButton" class="button" onclick="closePopup()"
+                            aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                    </div>
                 </div>
             </main>
             <div class="footer">
