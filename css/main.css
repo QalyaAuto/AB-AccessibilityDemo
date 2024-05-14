@@ -1,3 +1,23 @@
+header {
+    background: linear-gradient(135deg, #2100c8, #663399); /* Gradient sfondo */
+    color: #f0f0f0; /* Testo grigio chiaro per contrasto */
+    padding: 20px 0; /* Spaziatura interna sopra e sotto */
+    text-align: center; /* Testo centrato */
+}
+
+header h1 {
+    font-size: 36px; /* Dimensione del testo per il titolo */
+    margin-bottom: 10px; /* Spazio inferiore */
+    color: #f0f0f0; /* Cambio colore testo h1 */
+}
+
+header p {
+    font-size: 18px; /* Dimensione del testo per il sottotitolo */
+    margin: 0; /* Rimuove il margine predefinito */
+    color: #f0f0f0; /* Cambio colore testo paragrafo */
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -35,13 +55,29 @@ p {
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+.buttonList-padding {
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#page-container {
+    height: 65vh;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7%;
+}
+
 .button:hover, .button:focus {
     background-color: rgb(21, 45, 70); /* Darker blue on hover/focus */
     box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Slightly more prominent shadow on hover/focus */
 }
 
 footer {
-    position: relative;
+    position: relative;       ;
     right: 0;
     bottom: 0;
     left: 0;
