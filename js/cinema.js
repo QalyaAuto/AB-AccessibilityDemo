@@ -13,13 +13,12 @@ document.getElementById('submit').addEventListener('click', function() {
         }
     });
 
-    if(checkedSeats.length > 0 ){
-        let msg = 'I posti '+checkedSeats.join(', ')+' sono stati prenotati'
-        reservedSeats.innerHTML = "Avete prenotato i posti "+checkedSeats.join(', ')
-        reservedSeats.style.display = "block"
+    if (checkedSeats.length > 0) {
+        let msg = 'I posti ' + checkedSeats.join(', ') + ' sono stati prenotati';
+        reservedSeats.innerHTML = "Avete prenotato i posti " + checkedSeats.join(', ');
+        reservedSeats.style.display = "block";
         showPopup(msg);
     }
-    
 });
 
 document.getElementById('cancel').addEventListener('click', function() {
@@ -31,7 +30,11 @@ document.getElementById('cancel').addEventListener('click', function() {
 
 function showPopup(msg) {
     document.getElementById('confirmationPopup').classList.remove('hidden');
-    document.getElementById('reservedSeatsMessage').innerHTML = ""+msg
+    document.getElementById('reservedSeatsMessage').innerHTML = "" + msg;
+
+    // Disabilita tab per tutti gli elementi tranne il bottone di conferma
+    disableTabForAllExcept(document.getElementById('confirmActionButton'));
+
     setTimeout(() => {
         document.getElementById('confirmActionButton').focus();
     }, 100);
@@ -39,34 +42,47 @@ function showPopup(msg) {
 
 function closePopup() {
     document.getElementById('confirmationPopup').classList.add('hidden');
+    enableTabForAll();
 }
 
 function confirmAction() {
     closePopup();
 }
+
+// Function to disable tab navigation for all elements except the specified one
+function disableTabForAllExcept(element) {
+    const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
+    focusableElements.forEach(el => {
+        if (el !== element) {
+            el.setAttribute('tabindex', '-1');
+        }
+    });
+}
+
+// Function to enable tab navigation for all elements
+function enableTabForAll() {
+    const focusableElements = document.querySelectorAll('[tabindex="-1"]');
+    focusableElements.forEach(el => {
+        el.removeAttribute('tabindex');
+    });
+}
+
 // Function to show the modal
 function showModal() {
     var modal = document.getElementById("confirmationPopup");
     modal.classList.remove("hidden");
-  }
-  
-  // Function to close the modal
-  function hideModal() {
+}
+
+// Function to close the modal
+function hideModal() {
     var modal = document.getElementById("confirmationPopup");
     modal.classList.add("hidden");
-  }
-  
-  // Function to handle confirm action
-  function confirmAction() {
-    var modal = document.getElementById("confirmationPopup");
-    // Your code to handle confirm action here
-    hideModal();
-  }
-  
-  // When the user presses the ESC key, close the modal
-  window.addEventListener("keydown", function (event) {
+    enableTabForAll();
+}
+
+// When the user presses the ESC key, close the modal
+window.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-      hideModal();
+        hideModal();
     }
-  });
-  
+});
