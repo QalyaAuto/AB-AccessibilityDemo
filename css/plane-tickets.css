@@ -13,8 +13,15 @@
 }
 
 @keyframes unfold {
-    from { height: 60px; }
-    to { height: 200px; } /* Example height, adjust as needed */
+    from {
+        height: 60px;
+    }
+
+    to {
+        height: 200px;
+    }
+
+    /* Example height, adjust as needed */
 }
 
 /* ticket styling */
@@ -27,14 +34,45 @@
     position: relative;
 }
 
-.ticket-summary,
-.ticket-details {
+.ticket-summary {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ticket-route strong {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.route-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.route-text {
+    margin: 0 10px;
+}
+
+.route-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.animated-icon {
+    animation: plane-animation 2s infinite;
+}
+
+@keyframes plane-animation {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
 }
 
 .ticket-times,
@@ -45,18 +83,20 @@
     margin-top: 5px;
 }
 
-.detail-button, .pay-button {
-    background-color: #6C757D; /* Adjust the color to match your theme */
+.ticket-button {
+    background-color: #663399;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
     cursor: pointer;
-    margin-top: 10px;
+    width: auto;
+    border-radius: 15px;
+    margin-right: 20px;
 }
 
-.detail-button:hover, .pay-button:hover {
-    background-color: #5A6268;
+.ticket-button:hover {
+    background-color: #943399;
 }
 
 .hidden {
@@ -64,6 +104,7 @@
 }
 
 .ticket-details {
+    flex-direction: column;
     padding-top: 10px;
     border-top: 1px solid #eee;
 }
