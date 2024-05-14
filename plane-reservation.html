@@ -90,14 +90,23 @@
                             <div class="ticket-container">
                                 <div class="ticket-summary">
                                     <div class="ticket-route">
-                                        <span class="ticket-label">Da</span>
-                                        <strong>Roma Ciampino</strong> a <strong>Milano Malpensa</strong>
+                                        <div class="route-section">
+                                            <span class="route-text">
+                                                <strong>Da: </strong>Roma Ciampino
+                                            </span>
+                                            <div class="route-icon">
+                                                <i class="fas fa-plane-departure animated-icon"></i>
+                                            </div>
+                                            <span class="route-text">
+                                                <strong>A: </strong>Milano malpensa
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="ticket-departure">
                                         <span><strong>Data:</strong> 12 Giugno</span>
                                         <span><strong>Partenza:</strong> 6:20</span>
                                     </div>
-                                    <button class="detail-button" onclick="toggleDetails(this)">Dettagli</button>
+                                    <button class="ticket-button" onclick="toggleDetails(this)">Dettagli</button>
                                 </div>
                                 <div class="ticket-details hidden">
                                     <div class="ticket-times">
@@ -114,7 +123,7 @@
                                         <span>100€</span>
                                         <span>Economy</span>
                                     </div>
-                                    <button class="pay-button" onclick="showPopup()">Prenota</button>
+                                    <button class="ticket-button" onclick="showPopup()">Prenota</button>
                                 </div>
                             </div>
                         </li>
@@ -124,8 +133,8 @@
                     <!-- Modal -->
                     <div class="popup">
                         <p id="payButtonMessage">Hai Prenotato il tuo biglietto aereo</p>
-                        <button id="confirmActionButton" 
-                        class="button" onclick="closePopup()" aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                        <button id="confirmActionButton" class="button" onclick="closePopup()"
+                            aria-label="Chiudi messaggio di conferma">CONFERMA</button>
                     </div>
                 </div>
             </main>
