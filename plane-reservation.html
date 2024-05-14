@@ -35,17 +35,17 @@
                 <form id="bookingForm" aria-label="Form di selezione biglietti e date del viaggio aereo">
                     <div id="travelLocationAndDates" class="form-row">
                         <i class="fa fa-plane-departure">&nbsp;&nbsp;</i>
-                        <label for="from">Partenza da:</label>
+                        <label for="from">Partenza da:*</label>
                         <input type="text" id="from" name="from" required aria-required="true"
                             aria-label="Aereoporto di partenza">
                         <i class="fa-solid fa-plane-arrival">&nbsp;&nbsp;</i>
-                        <label for="to">Arrivo a:</label>
+                        <label for="to">Arrivo a:*</label>
                         <input type="text" id="to" name="to" required aria-required="true"
                             aria-label="Aereoporto di arrivo">
                         <button type="button" aria-label="Scambia i valori di partenza e arrivo"
                             onclick="swapLocations()">Scambia</button>
                         <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
-                        <label for="departureDate">Data di partenza:</label>
+                        <label for="departureDate">Data di partenza:*</label>
                         <input type="date" id="departureDate" name="departureDate" required aria-required="true"
                             aria-label="Data di partenza">
                         <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </form>
-                <div id="resultSearch" class=" list">
+                <div id="resultSearch" class="hidden list">
                     <ul id="ticketList">
                         <!-- 1st Ticket -->
                         <li>
