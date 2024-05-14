@@ -1,22 +1,44 @@
 header {
-    background: linear-gradient(135deg, #2100c8, #663399); /* Gradient sfondo */
-    color: #f0f0f0; /* Testo grigio chiaro per contrasto */
-    padding: 20px 0; /* Spaziatura interna sopra e sotto */
-    text-align: center; /* Testo centrato */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2100c8, #663399);
+    color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.logo-container {
+    position: absolute;
+    left: -5px; /* Distanza dal bordo sinistro */
+}
+
+.logo {
+    max-height: 50px; /* Regola l'altezza del logo */
+    border: 10px solid #f0f0f0; /* Bordo bianco attorno al logo */
+    padding: 15px; /* Spaziatura interna per evitare che il bordo tocchi il logo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Ombra bianca attorno al logo */
+    background-color: #f0f0f0; /* Sfondo semi-trasparente */
+    border-top-right-radius: 25px; /* Bordo arrotondato solo in alto a sinistra */
+    border-bottom-right-radius: 25px; /* Bordo arrotondato solo in basso a sinistra */
+}
+
+
+
+.header-content {
+    text-align: center;
 }
 
 header h1 {
-    font-size: 36px; /* Dimensione del testo per il titolo */
-    margin-bottom: 10px; /* Spazio inferiore */
-    color: #f0f0f0; /* Cambio colore testo h1 */
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #f0f0f0;
 }
 
 header p {
-    font-size: 18px; /* Dimensione del testo per il sottotitolo */
-    margin: 0; /* Rimuove il margine predefinito */
-    color: #f0f0f0; /* Cambio colore testo paragrafo */
+    font-size: 18px;
+    margin: 0;
+    color: #f0f0f0;
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -56,14 +78,11 @@ p {
 }
 
 .buttonList-padding {
-    
     text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 25px;
     font-family: Verdana, Tahoma, sans-serif;
-    
-    
 }
 
 #page-container {
@@ -74,14 +93,13 @@ p {
     justify-content: center
 }
 
-
 .button:hover, .button:focus {
     background-color: rgb(21, 45, 70); /* Darker blue on hover/focus */
     box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Slightly more prominent shadow on hover/focus */
 }
 
 footer {
-    position: relative;       ;
+    position: relative;       
     right: 0;
     bottom: 0;
     left: 0;
@@ -92,7 +110,7 @@ footer {
 }
 
 .footer-main {
-    position: absolute;       ;
+    position: absolute;       
     right: 0;
     bottom: 0;
     left: 0;
@@ -101,9 +119,10 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
 footer a {
     color: #fff;
-    text-decoration:underline;
+    text-decoration: underline;
     padding: 10px;
 }
 
@@ -111,7 +130,7 @@ footer a {
     padding: 20px;
 }
 
-.backButton{
+.backButton {
     display: inline-block;
     padding: 10px 30px;
     background-color: #663399; /* Blue background */
