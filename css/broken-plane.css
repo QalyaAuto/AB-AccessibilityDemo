@@ -18,9 +18,13 @@ input[type="text"],
 input[type="date"],
 input[type="number"],
 select {
-    padding: 10px;
-    margin: 0em;
-    height: 0em;
+    padding: 8px;
+    margin: 5px;
+    min-width: 200px;
+    /* Adjusted width to match across all input types */
+    max-width: 500px;
+    width: 95%;
+    /* This makes inputs responsive and fills the container */
 }
 
 button {
@@ -40,16 +44,15 @@ i {
 }
 
 #bookingForm {
-    width: 99%;    
     background-color: rgb(255, 255, 255);
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #travelLocationAndDates,
 #travelDetails {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 fieldset {
@@ -63,13 +66,19 @@ legend {
     color: #5D5D5D;
 }
 
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
 input[type="checkbox"] {
+    margin-left: 5px;
     vertical-align: middle;
 }
 
 /* Align checkboxes with their labels */
 input[type="checkbox"] {
-    margin-right: 0px; /* Space between checkbox and label */
+    margin-right: 10px; /* Space between checkbox and label */
     vertical-align: middle; /* Aligns checkbox vertically with the text */
 }
 
@@ -78,26 +87,20 @@ input[type="checkbox"] {
     .form-row {
         display: flex;
         align-items: center;
-        height: 5em;
+        height: 4em;
     }
 
     .form-row label,
     .form-row input,
+    .form-row button,
     .form-row select {
         border-radius: 15px;
         margin-right: 20px;
         /* Ensure consistent spacing between form elements */
     }
-
-    .form-row button{
-        width: 1px;
-        height: 10px;
-        border-radius: 15px;
-        margin-right: 20px;
-    }
     
     .form-row input {
-        flex: 0;
+        flex: 1;
     }
     .form-row button {
         flex-grow: 0.05;
