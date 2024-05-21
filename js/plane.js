@@ -17,23 +17,23 @@ document.getElementById('bookingForm').addEventListener('submit', function (even
 
   // Date validation
   if (departureDate < currentDate) {
-      alert("La data di partenza non può essere precedente a quella odierna.");
-      return;
+    alert("La data di partenza non può essere precedente a quella odierna.");
+    return;
   }
 
   if (returnDate < currentDate) {
-      alert("La data di ritorno non può essere precedente a quella odierna.");
-      return;
+    alert("La data di ritorno non può essere precedente a quella odierna.");
+    return;
   }
 
   if (returnDate < departureDate) {
-      alert("La data di ritorno non può essere precedente a quella di partenza.");
-      return;
+    alert("La data di ritorno non può essere precedente a quella di partenza.");
+    return;
   }
 
   if (this.checkValidity()) {
-      var ticketList = document.getElementById("resultSearch");
-      ticketList.classList.toggle("hidden");
+    var ticketList = document.getElementById("resultSearch");
+    ticketList.classList.toggle("hidden");
   }
 });
 
@@ -49,7 +49,7 @@ function showBookingPopup(departure, arrival) {
   document.getElementById('bookingConfirmationMessage').innerHTML = `Stai prenotando il volo ${departure} > ${arrival}`;
   modal.classList.remove('hidden');
   setTimeout(() => {
-      document.getElementById('confirmBookingButton').focus();
+    document.getElementById('confirmBookingButton').focus();
   }, 100);
   trapFocus(modal); // Trap focus inside the modal
 }
@@ -62,7 +62,7 @@ function confirmBooking(departure, arrival) {
   modal.classList.remove('hidden');
   closeBookingPopup();
   setTimeout(() => {
-      document.getElementById('confirmActionButton').focus();
+    document.getElementById('confirmActionButton').focus();
   }, 100);
 }
 
@@ -86,33 +86,33 @@ function trapFocus(modal) {
   const focusableContent = modal.querySelectorAll(focusableElements);
   const lastFocusableElement = focusableContent[focusableContent.length - 1];
 
-  document.addEventListener('keydown', function(e) {
-      let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+  document.addEventListener('keydown', function (e) {
+    let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
-      if (!isTabPressed) {
-          return;
-      }
+    if (!isTabPressed) {
+      return;
+    }
 
-      if (e.shiftKey) { // if shift key pressed for shift + tab combination
-          if (document.activeElement === firstFocusableElement) {
-              lastFocusableElement.focus(); // add focus for the last focusable element
-              e.preventDefault();
-          }
-      } else { // if tab key is pressed
-          if (document.activeElement === lastFocusableElement) {
-              firstFocusableElement.focus(); // add focus for the first focusable element
-              e.preventDefault();
-          }
+    if (e.shiftKey) { // if shift key pressed for shift + tab combination
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus(); // add focus for the last focusable element
+        e.preventDefault();
       }
+    } else { // if tab key is pressed
+      if (document.activeElement === lastFocusableElement) {
+        firstFocusableElement.focus(); // add focus for the first focusable element
+        e.preventDefault();
+      }
+    }
   });
 
   firstFocusableElement.focus();
 }
 
 // Event listener to close the modal when the ESC key is pressed
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
-      closePopup();
-      closeBookingPopup();
+    closePopup();
+    closeBookingPopup();
   }
 });

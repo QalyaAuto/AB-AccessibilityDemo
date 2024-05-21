@@ -80,11 +80,9 @@ input[type="checkbox"] {
         height: 4em;
     }
 
-    .form-row label:hover,
     .form-row input:hover,
     .form-row button:hover,
     .form-row select:hover,
-    .form-row label:focus,
     .form-row input:focus,
     .form-row button:focus,
     .form-row select:focus {
