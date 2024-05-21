@@ -114,7 +114,7 @@
                                 <span>100€</span>
                                 <span>Economy</span>
                             </div>
-                            <button class="ticket-button" onclick="showPopup()">Prenota</button>
+                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
@@ -157,7 +157,7 @@
                                 <span>95€</span>
                                 <span>Economy</span>
                             </div>
-                            <button class="ticket-button" onclick="showPopup()">Prenota</button>
+                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
@@ -200,7 +200,7 @@
                                 <span>250€</span>
                                 <span>Prima Classe</span>
                             </div>
-                            <button class="ticket-button" onclick="showPopup()">Prenota</button>
+                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
@@ -211,6 +211,14 @@
             <div class="popup">
                 <p id="payButtonMessage">Hai Prenotato il tuo biglietto aereo</p>
                 <button id="confirmActionButton" class="button" onclick="closePopup()" aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+            </div>
+        </div>
+        <div id="bookingConfirmationPopup" class="overlay hidden">
+            <!-- Modal -->
+            <div class="popup">
+                <p id="bookingConfirmationMessage"></p>
+                <button id="confirmBookingButton" class="button" aria-label="Conferma prenotazione" onclick="confirmBooking('Roma Ciampino', 'Milano Malpensa')">CONFERMA</button>
+                <button class="button" onclick="closeBookingPopup()" aria-label="Annulla prenotazione">ANNULLA</button>
             </div>
         </div>
     </main>
