@@ -78,3 +78,38 @@ window.addEventListener("keydown", function (event) {
     hideModal();
   }
 });
+
+// Event Listener Acquista
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('#acquista').addEventListener('click', function () {
+      showPurchasingPopup("Sei sicuro di voler procedere all'acquisto?");
+  });
+});
+
+// Show purchasing confirmation popup
+function showPurchasingPopup(msg) {
+  var modal = document.getElementById('PurchasingConfirmationPopup');
+  document.getElementById('PurchasingConfirmationMessage').innerHTML = msg;
+  modal.classList.remove('hidden');
+  setTimeout(() => {
+      document.getElementById('PurchasingButton').focus();
+  }, 100);
+  trapFocus(modal); // Trap focus inside the modal
+}
+
+// Final purchasing confirmation
+function confirmPurchasing() {
+  var modal = document.getElementById('confirmationPopup');
+  document.getElementById('purchaseMessage').innerHTML = "ACQUISTO ANDATO A BUON FINE!";
+  modal.classList.remove('hidden');
+  closeBookingPopup();
+  setTimeout(() => {
+      document.getElementById('confirmActionButton').focus();
+  }, 100);
+}
+
+// Close the purchasing confirmation popup
+function closeBookingPopup() {
+  var modal = document.getElementById('PurchasingConfirmationPopup');
+  modal.classList.add('hidden');
+}
