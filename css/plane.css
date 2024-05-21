@@ -80,6 +80,19 @@ input[type="checkbox"] {
         height: 4em;
     }
 
+    .form-row label:hover,
+    .form-row input:hover,
+    .form-row button:hover,
+    .form-row select:hover,
+    .form-row label:focus,
+    .form-row input:focus,
+    .form-row button:focus,
+    .form-row select:focus {
+        border-radius: 20px;
+        border: 3px solid rgb(0,0,0,1);
+        /* Ensure consistent spacing between form elements */
+    }
+
     .form-row label,
     .form-row input,
     .form-row button,
