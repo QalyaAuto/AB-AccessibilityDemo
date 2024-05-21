@@ -39,7 +39,7 @@ ol {
 }
 
 .seat :focus+label {
-  border: 1x solid rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
   outline: 2.5px solid rgb(0, 0, 0);
   cursor: pointer;
   transform: scale(1.2);
