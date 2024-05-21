@@ -1,0 +1,33 @@
+.autocomplete-suggestions {
+    position: absolute;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    width: calc(100% - 10px); /* Adjust the width as needed */
+    border-radius: 8px; /* Rounded borders */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+/* Individual suggestion item */
+.autocomplete-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px; /* Rounded borders for each item */
+}
+
+/* Active suggestion item */
+.autocomplete-suggestion-active {
+    background-color: #f0f0f0;
+}
+
+/* Add padding to the input container to avoid overlapping with the autocomplete suggestions */
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 80%;
+}

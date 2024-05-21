@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css\main.css">
     <link rel="stylesheet" type="text/css" href="css\plane.css">
     <link rel="stylesheet" type="text/css" href="css\plane-tickets.css">
+    <link rel="stylesheet" type="text/css" href="css\plane-autocomplete.css">
     <script src="https://kit.fontawesome.com/3401cdb452.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,7 +19,7 @@
             <span class="fa-solid fa-circle-chevron-left"
                 aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
             Indietro
-        </a>   
+        </a>
     </div>
     <div class="header-content">
         <div class="subnav">
@@ -26,7 +28,7 @@
                 <a href="#company">Poltrone Concerto</a>
                 <a href="#team">Shop</a>
                 <a href="#careers">Biglietto Aereo</a>
-              </div>
+            </div>
         </div>
 
         <div class="subnav">
@@ -35,18 +37,19 @@
                 <a href="#company">Poltrone Concerto</a>
                 <a href="#team">Shop</a>
                 <a href="#careers">Biglietto Aereo</a>
-              </div>
+            </div>
         </div>
         <div class="title">
             <h1>Home Page</h1>
-        <p>demo di accessibilita'</p>
+            <p>demo di accessibilita'</p>
         </div>
-        
+
     </div>
     <div class="logo-container">
-        <img src="https://www.claritergroup.com/wp-content/uploads/2022/02/Clariter-TM-Transparent-LQ.png" alt="Clariter Logo" class="logo">
+        <img src="https://www.claritergroup.com/wp-content/uploads/2022/02/Clariter-TM-Transparent-LQ.png"
+            alt="Clariter Logo" class="logo">
     </div>
-    
+
 </header>
 
 <body>
@@ -54,19 +57,35 @@
     <main class="padding">
         <form id="bookingForm" aria-label="Form di selezione biglietti e date del viaggio aereo">
             <div id="travelLocationAndDates" class="form-row">
-                <i class="fa fa-plane-departure">&nbsp;&nbsp;</i>
-                <label for="from">Partenza da:*</label>
-                <input type="text" class="inputbox" id="from" name="from" required aria-required="true" aria-label="Aereoporto di partenza">
-                <i class="fa-solid fa-plane-arrival">&nbsp;&nbsp;</i>
-                <label for="to">Arrivo a:*</label>
-                <input type="text" class="inputbox" id="to" name="to" required aria-required="true" aria-label="Aereoporto di arrivo">
-                <button type="button" aria-label="Scambia i valori di partenza e arrivo" onclick="swapLocations()">Scambia</button>
-                <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
-                <label for="departureDate">Data di partenza:*</label>
-                <input type="date" id="departureDate" name="departureDate" required aria-required="true" aria-label="Data di partenza">
-                <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
-                <label for="returnDate">Data di Ritorno:</label>
-                <input type="date" id="returnDate" name="returnDate" aria-label="Data di ritorno">
+                <div class="input-container">
+                    <i class="fa fa-plane-departure">&nbsp;&nbsp;</i>
+                    <label for="from">Partenza da:*</label>
+                    <input type="text" class="inputbox" id="from" name="from" required aria-required="true"
+                        aria-label="Aereoporto di partenza" aria-autocomplete="list"
+                        aria-controls="fromautocomplete-list" aria-haspopup="true">
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-plane-arrival">&nbsp;&nbsp;</i>
+                    <label for="to">Arrivo a:*</label>
+                    <input type="text" class="inputbox" id="to" name="to" required aria-required="true"
+                        aria-label="Aereoporto di arrivo" aria-autocomplete="list" aria-controls="toautocomplete-list"
+                        aria-haspopup="true">
+                </div>
+                <div class="input-container">
+                    <button type="button" aria-label="Scambia i valori di partenza e arrivo"
+                        onclick="swapLocations()">Scambia</button>
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
+                    <label for="departureDate">Data di partenza:*</label>
+                    <input type="date" id="departureDate" name="departureDate" required aria-required="true"
+                        aria-label="Data di partenza">
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-calendar">&nbsp;&nbsp;</i>
+                    <label for="returnDate">Data di Ritorno:</label>
+                    <input type="date" id="returnDate" name="returnDate" aria-label="Data di ritorno">
+                </div>
             </div>
             <div id="travelDetails">
                 <fieldset class="form-row">
@@ -107,14 +126,16 @@
                             <div class="ticket-route">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
+                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
+                                            Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <hr />
                                         <i class="fa-solid fa-plane"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
+                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
+                                            Malpensa</p>
                                     </span>
                                 </div>
                             </div>
@@ -139,7 +160,8 @@
                                 <span>100€</span>
                                 <span>Economy</span>
                             </div>
-                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
+                            <button class="ticket-button"
+                                onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
@@ -150,14 +172,16 @@
                             <div class="ticket-route">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
+                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
+                                            Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <hr />
                                         <i class="fa-solid fa-plane"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
+                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
+                                            Malpensa</p>
                                     </span>
                                 </div>
                             </div>
@@ -182,7 +206,8 @@
                                 <span>95€</span>
                                 <span>Economy</span>
                             </div>
-                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
+                            <button class="ticket-button"
+                                onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
@@ -193,14 +218,16 @@
                             <div class="ticket-route">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
+                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
+                                            Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <hr />
                                         <i class="fa-solid fa-plane"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
+                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
+                                            Malpensa</p>
                                     </span>
                                 </div>
                             </div>
@@ -225,7 +252,8 @@
                                 <span>250€</span>
                                 <span>Prima Classe</span>
                             </div>
-                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
+                            <button class="ticket-button"
+                                onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
@@ -235,14 +263,16 @@
             <!-- Modal -->
             <div class="popup">
                 <p id="payButtonMessage">Hai Prenotato il tuo biglietto aereo</p>
-                <button id="confirmActionButton" class="button" onclick="closePopup()" aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                <button id="confirmActionButton" class="button" onclick="closePopup()"
+                    aria-label="Chiudi messaggio di conferma">CONFERMA</button>
             </div>
         </div>
         <div id="bookingConfirmationPopup" class="overlay hidden">
             <!-- Modal -->
             <div class="popup">
                 <p id="bookingConfirmationMessage"></p>
-                <button id="confirmBookingButton" class="button" aria-label="Conferma prenotazione" onclick="confirmBooking('Roma Ciampino', 'Milano Malpensa')">CONFERMA</button>
+                <button id="confirmBookingButton" class="button" aria-label="Conferma prenotazione"
+                    onclick="confirmBooking('Roma Ciampino', 'Milano Malpensa')">CONFERMA</button>
                 <button class="button" onclick="closeBookingPopup()" aria-label="Annulla prenotazione">ANNULLA</button>
             </div>
         </div>
@@ -259,5 +289,7 @@
         </footer>
     </div>
     <script src="js\plane.js"></script>
+    <script src="js\plane-searchAutocomplete.js"></script>
 </body>
+
 </html>
