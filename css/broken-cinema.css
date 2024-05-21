@@ -34,22 +34,21 @@ html {
   .seat {
     display: flex;
     flex: auto;
-    padding: 15px 15px;
+    padding: 25px 25px;
     position: relative;
+    transform: scale(60%);
   }
   
   .seat :focus+label {
     border: 1x solid rgb(0, 0, 0);
     outline: 2.5px solid rgb(0, 0, 0);
-    cursor: pointer;
     transform: scale(1.2);
   }
   
   .seat :hover {
     border: 1x solid rgb(0, 0, 0);
-    outline: 2.5px solid rgb(0, 0, 0);
-    cursor: pointer;
-    transform: scale(1.2);
+    outline: 1,5px solid rgb(0, 0, 0);
+    
   }
   
   .seat input[type=checkbox] {
@@ -60,6 +59,7 @@ html {
   /* Pink when the seat is selected */
   .seat input[type=checkbox]:checked+label {
     background: #000000;
+    transform: scale(20%);
   }
   
   .seat input[type=checkbox]:disabled+label {

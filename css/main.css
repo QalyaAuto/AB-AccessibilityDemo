@@ -7,9 +7,15 @@ header {
     padding: 20px 0;
 }
 
+.backbutton-content {
+    position: absolute;
+    left: 2%;
+}
+
 .logo-container {
     position: absolute;
-    left: -5px; /* Distanza dal bordo sinistro */
+    right: -5px; /* Distanza dal bordo sinistro */
+    
 }
 
 .logo {
@@ -18,9 +24,11 @@ header {
     padding: 15px; /* Spaziatura interna per evitare che il bordo tocchi il logo */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Ombra bianca attorno al logo */
     background-color: #f0f0f0; /* Sfondo semi-trasparente */
-    border-top-right-radius: 25px; /* Bordo arrotondato solo in alto a sinistra */
-    border-bottom-right-radius: 25px; /* Bordo arrotondato solo in basso a sinistra */
+    border-top-left-radius: 25px; /* Bordo arrotondato solo in alto a sinistra */
+    border-bottom-left-radius: 25px; /* Bordo arrotondato solo in basso a sinistra */
 }
+
+
 
 
 
@@ -131,7 +139,7 @@ footer a {
 }
 
 .backButton {
-    display: inline-block;
+    float: left;
     padding: 10px 30px;
     background-color: #663399; /* Blue background */
     color: white;
@@ -144,3 +152,4 @@ footer a {
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
+

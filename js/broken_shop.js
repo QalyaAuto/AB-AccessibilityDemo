@@ -6,6 +6,7 @@ function aggiungiProdotto(nome, prezzo) {
     buttonr.textContent = "rimuovi";
    
     elencoProdotti.appendChild(nuovoProdotto);
+    buttonr.classList.add("ButtonRimuovi");
     nuovoProdotto.appendChild(buttonr);
     buttonr.addEventListener('click', rimuoviElementoPadre);
    
