@@ -94,6 +94,7 @@
 
 .ticket-button:hover {
     background-color: #943399;
+    
 }
 
 .hidden {
@@ -106,3 +107,8 @@
     border-top: 1px solid #eee;
 }
 
+.hamburger-menu {
+    font-size: 50px;
+    padding-left: 10px;
+    padding-top: 15px;  
+}

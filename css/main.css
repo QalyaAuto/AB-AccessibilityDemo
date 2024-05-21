@@ -14,18 +14,22 @@ header {
 
 .logo-container {
     position: absolute;
+    display:flex;
+    justify-items: center;
+    align-items: center;
     right: -5px; /* Distanza dal bordo sinistro */
-    
-}
-
-.logo {
-    max-height: 50px; /* Regola l'altezza del logo */
     border: 10px solid #f0f0f0; /* Bordo bianco attorno al logo */
     padding: 15px; /* Spaziatura interna per evitare che il bordo tocchi il logo */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Ombra bianca attorno al logo */
     background-color: #f0f0f0; /* Sfondo semi-trasparente */
     border-top-left-radius: 25px; /* Bordo arrotondato solo in alto a sinistra */
     border-bottom-left-radius: 25px; /* Bordo arrotondato solo in basso a sinistra */
+    
+    
+}
+
+.logo {
+    max-height: 50px; /* Regola l'altezza del logo */
 }
 
 
@@ -33,7 +37,12 @@ header {
 
 
 .header-content {
+    display:flex;
+    width: 65%;
     text-align: center;
+    align-items: center;
+    justify-items: center;
+
 }
 
 header h1 {
@@ -151,5 +160,67 @@ footer a {
     border: solid 3px white; /* White border around the button */
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.subnav {
+    overflow: hidden;
+    float: left;
+    width: 20%;
+    text-align: center;
+    
+
+    
+}
+.subnav .subnavbtn {
+    
+    font-size: 22px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 16px 18px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 2px;
+    
+  }
+
+  .navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: white;
+    color:#454849 ;
+  }
+  
+  .subnav-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #454849;
+    z-index: 1;
+  }
+  
+  .subnav-content a {
+    float: left;
+    color: #454849;
+    text-decoration: none;
+  }
+  
+  .subnav-content a:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .subnav:hover .subnav-content {
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .title {
+    width: 60%;
+  }
+
+.fa-caret-down {
+    color: #fff;
+    padding: 8px;
 }
 
