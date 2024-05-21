@@ -30,7 +30,7 @@ document.getElementById('cancel').addEventListener('click', function() {
                             .map(checkbox => checkbox.id);
 
     if (checkedSeats.length > 0) {
-        let msg = 'I posti ' + checkedSeats.join(', ') + ' sono stati prenotati';
+        let msg = 'Sicuro di voler annullare la prenotazione dei posti ' + checkedSeats.join(', ') + ' ?';
         cancelSeatsMessage.innerHTML = msg;
         showCancelPopup(msg);
     }
