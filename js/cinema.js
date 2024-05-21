@@ -23,66 +23,91 @@ document.getElementById('submit').addEventListener('click', function() {
 
 document.getElementById('cancel').addEventListener('click', function() {
     const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
+    const cancelSeatsMessage = document.querySelector('#cancelMessage');
+
+    let checkedSeats = Array.from(checkboxes)
+                            .filter(checkbox => checkbox.checked && !checkbox.disabled)
+                            .map(checkbox => checkbox.id);
+
+    if (checkedSeats.length > 0) {
+        let msg = 'I posti ' + checkedSeats.join(', ') + ' sono stati prenotati';
+        cancelSeatsMessage.innerHTML = msg;
+        showCancelPopup(msg);
+    }
+});
+
+document.getElementById('cancelActionButton').addEventListener('click', function(){
+    const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
     checkboxes.forEach(function(checkbox) {
-        checkbox.checked = false; // Deselect all checkboxes
+        if (checkbox.checked && !checkbox.disabled) {
+            checkbox.checked = false; // Deselect all checkboxes
+        }
     });
+    closeCancelPopup(); // Close the popup after cancel action
 });
 
 function showPopup(msg) {
-    document.getElementById('confirmationPopup').classList.remove('hidden');
-    document.getElementById('reservedSeatsMessage').innerHTML = "" + msg;
+    const modal = document.getElementById('confirmationPopup');
+    document.getElementById('reservedSeatsMessage').innerHTML = msg;
+    modal.classList.remove('hidden');
+    trapFocus(modal);
+}
 
-    // Disabilita tab per tutti gli elementi tranne il bottone di conferma
-    disableTabForAllExcept(document.getElementById('confirmActionButton'));
-
-    setTimeout(() => {
-        document.getElementById('confirmActionButton').focus();
-    }, 100);
+function showCancelPopup(msg) {
+    const modal = document.getElementById('cancelPopup');
+    document.getElementById('cancelMessage').innerHTML = msg;
+    modal.classList.remove('hidden');
+    trapFocus(modal);
 }
 
 function closePopup() {
-    document.getElementById('confirmationPopup').classList.add('hidden');
-    enableTabForAll();
+    const modal = document.getElementById('confirmationPopup');
+    modal.classList.add('hidden');
+}
+
+function closeCancelPopup() {
+    const modal = document.getElementById('cancelPopup');
+    modal.classList.add('hidden');
 }
 
 function confirmAction() {
     closePopup();
 }
 
-// Function to disable tab navigation for all elements except the specified one
-function disableTabForAllExcept(element) {
-    const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
-    focusableElements.forEach(el => {
-        if (el !== element) {
-            el.setAttribute('tabindex', '-1');
+// Trap focus inside the modal
+function trapFocus(modal) {
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; 
+    const focusableContent = modal.querySelectorAll(focusableElements);
+    const lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+    document.addEventListener('keydown', function(e) {
+        let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+        if (!isTabPressed) {
+            return;
+        }
+
+        if (e.shiftKey) { // if shift key pressed for shift + tab combination
+            if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus(); // add focus for the last focusable element
+                e.preventDefault();
+            }
+        } else { // if tab key is pressed
+            if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus(); // add focus for the first focusable element
+                e.preventDefault();
+            }
         }
     });
-}
 
-// Function to enable tab navigation for all elements
-function enableTabForAll() {
-    const focusableElements = document.querySelectorAll('[tabindex="-1"]');
-    focusableElements.forEach(el => {
-        el.removeAttribute('tabindex');
-    });
-}
-
-// Function to show the modal
-function showModal() {
-    var modal = document.getElementById("confirmationPopup");
-    modal.classList.remove("hidden");
-}
-
-// Function to close the modal
-function hideModal() {
-    var modal = document.getElementById("confirmationPopup");
-    modal.classList.add("hidden");
-    enableTabForAll();
+    firstFocusableElement.focus();
 }
 
 // When the user presses the ESC key, close the modal
 window.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-        hideModal();
+        closePopup();
+        closeCancelPopup();
     }
 });

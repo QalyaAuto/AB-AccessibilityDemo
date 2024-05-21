@@ -521,12 +521,19 @@
                         <button class="button" id="cancel" aria-label="Annulla la selezione corrente">ANNULLA</button>
                     </div>
                     <div id="reservedSeats" aria-label="posti prenotati"></div>
+                    <div id="cancelPopup" class="overlay hidden">
+                        <!-- Modal -->
+                        <div class="popup">
+                            <p id="cancelMessage"></p>
+                            <button id="cancelActionButton" class="button" aria-label="Conferma cancellazione selezione posti">CONFERMA</button>
+                            <button id="closeActionButton" class="button" onclick="closeCancelPopup()" aria-label="Chiudi messaggio">CHIUDI</button>
+                        </div>
+                    </div>
                     <div id="confirmationPopup" class="overlay hidden">
                         <!-- Modal -->
                         <div class="popup">
                             <p id="reservedSeatsMessage"></p>
-                            <button id="confirmActionButton" class="button" onclick="confirmAction()"
-                                aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                            <button id="confirmActionButton" class="button" onclick="confirmAction()" aria-label="Chiudi messaggio di conferma">CONFERMA</button>
                         </div>
                     </div>
                 </div>
