@@ -77,10 +77,10 @@
                     <input type="number" id="children" name="children" min="0" value="0" aria-label="Numero bambini">
                     <label for="seatType">Tipo Seduta:</label>
                     <select id="seatType" name="seatType" aria-label="Lista per la classe di prenotazione">
-                        <option value="economy" aria-label="Economy">Economy</option>
-                        <option value="premium" aria-label="Premium">Premium</option>
-                        <option value="business" aria-label="Business">Business</option>
-                        <option value="first" aria-label="Prima Classe">Prima Classe</option>
+                        <option value="Economy" aria-label="Economy">Economy</option>
+                        <option value="Premium" aria-label="Premium">Premium</option>
+                        <option value="Business" aria-label="Business">Business</option>
+                        <option value="Prima Classe" aria-label="Prima Classe">Prima Classe</option>
                     </select>
                 </fieldset>
             </div>
@@ -94,7 +94,7 @@
                     <input type="checkbox" id="departureOnlyFlights" name="departureOnlyFlights">
                 </div>
                 <div>
-                    <button type="submit" onclick="toggleTicketList()" aria-label="Cerca il tuo volo">Cerca</button>
+                    <button type="submit" id="buttonCerca" onclick="toggleTicketList()" aria-label="Cerca il tuo volo">Cerca</button>
                 </div>
             </div>
         </form>
@@ -137,7 +137,7 @@
                             </div>
                             <div class="ticket-price">
                                 <span>100€</span>
-                                <span>Economy</span>
+                                <span class="classSeat" aria-label="classSeat">Economy</span>
                             </div>
                             <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
@@ -180,7 +180,7 @@
                             </div>
                             <div class="ticket-price">
                                 <span>95€</span>
-                                <span>Economy</span>
+                                <span class="classSeat" aria-label="classSeat">Economy</span>
                             </div>
                             <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
@@ -223,7 +223,7 @@
                             </div>
                             <div class="ticket-price">
                                 <span>250€</span>
-                                <span>Prima Classe</span>
+                                <span class="classSeat" aria-label="classSeat">Prima Classe</span>
                             </div>
                             <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
