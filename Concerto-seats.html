@@ -529,16 +529,16 @@
                         <!-- Modal -->
                         <div class="popup">
                             <p id="reservedSeatsMessage"></p>
-                            <button id="confirmActionButton" class="button" onclick="confirmAction()"
-                                aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                            <button id="confirmActionButton" class="button" onclick="confirmAction()" aria-label="Conferma la prenotazione">CONFERMA</button>
+                            <button id="cancelActionButton" class="button" onclick="closePopup()" aria-label="Chiudi messaggio di conferma">CHIUDI</button>
                         </div>
                     </div>
                     <div id="cancelPopup" class="overlay hidden">
                         <!-- Modal -->
                         <div class="popup">
                             <p id="cancelMessage"></p>
-                            <button id="cancelActionButton" class="button" aria-label="Conferma cancellazione selezione posti">CONFERMA</button>
-                            <button id="closeActionButton" class="button" onclick="closeCancelPopup()" aria-label="Chiudi messaggio">CHIUDI</button>
+                            <button id="cancelActionButton" class="button" onclick="confirmCancelAction()" aria-label="Annulla la selezione">CONFERMA</button>
+                            <button id="cancelActionButton" class="button" onclick="closeCancelPopup()" aria-label="Chiudi messaggio">CHIUDI</button>
                         </div>
                     </div>
                 </div>
