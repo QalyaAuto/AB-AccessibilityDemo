@@ -56,14 +56,20 @@ document.getElementById('bookingForm').addEventListener('submit', function (even
 function updateTickets() {
   const fromValue = document.getElementById('from').value;
   const toValue = document.getElementById('to').value;
+  const classValue =document.getElementById('seatType').value;
 
   const departureElements = document.querySelectorAll('[aria-label="Aereoporto di partenza"]');
   const destinationElements = document.querySelectorAll('[aria-label="Aereoporto di destinazione"]');
   const departureDateValue = new Date(document.getElementById('departureDate').value).toLocaleDateString('it-IT', { day: 'numeric', month: 'long' });
   const dateElements = document.querySelectorAll('.ticket-departure span');
+  const classResults = document.querySelectorAll('[aria-label="classSeat"]');
 
   departureElements.forEach(element => {
     element.textContent = fromValue;
+  });
+
+  classResults.forEach(element => {
+    element.textContent = classValue;
   });
 
   destinationElements.forEach(element => {
@@ -84,9 +90,11 @@ function toggleDetails(button) {
 }
 
 // Show booking confirmation popup
-function showBookingPopup(departure, arrival) {
+function showBookingPopup() {
   var modal = document.getElementById('bookingConfirmationPopup');
-  document.getElementById('bookingConfirmationMessage').innerHTML = `Stai prenotando il volo ${departure} > ${arrival}`;
+  const fromValue = document.getElementById('from').value;
+  const toValue = document.getElementById('to').value;
+  document.getElementById('bookingConfirmationMessage').innerHTML = `Stai prenotando il volo ${fromValue} > ${toValue}`;
   modal.classList.remove('hidden');
   setTimeout(() => {
     document.getElementById('confirmBookingButton').focus();

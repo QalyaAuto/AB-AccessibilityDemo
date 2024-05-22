@@ -26,6 +26,28 @@
     
 }
 
+.basket-inner::-webkit-scrollbar {
+    width: 7px; /* Larghezza della scrollbar verticale */
+    height: 0px; /* Altezza della scrollbar orizzontale */
+}
+
+.basket-inner::-webkit-scrollbar-thumb {
+    background-color: #1b1b1b; /* Colore del pollice */
+    border-radius: 10px; /* Arrotondamento degli angoli */
+    border: 1px solid #ffffff; /* Bordo del pollice */
+}
+
+.basket-inner::-webkit-scrollbar-track {
+    background: #fff1f1; /* Colore del tracciato */
+    border-radius: 10px; /* Arrotondamento degli angoli */
+    border: 1px solid #ffffff; /* Bordo del tracciato */
+}
+
+.basket-inner::-webkit-scrollbar-thumb:hover {
+    background: #663399; /* Colore del pollice quando è in hover */
+}
+
+
 .basket-inner{
     min-height: 40px;
     max-height:430px ;
