@@ -13,10 +13,10 @@
 
 <body>
 
-    <header>
+    <header id="header">
 
         <div class="backbutton-content">
-            <a href=main.html class="backButton">
+            <a href=main.html class="backButton" id="backButton">
                 <span class="fa-solid fa-circle-chevron-left"
                     aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
                 Indietro
@@ -26,7 +26,7 @@
             <h1>Negozio</h1>
         </div>
         <div class="logo-container">
-            <img src="assets\images\logo-clariter.png" alt="Clariter Logo" class="logo">
+                <img src="assets\images\logo-clariter.png"  alt="Clariter Logo" class="logo">
         </div>
         
     </header>
@@ -257,29 +257,25 @@
                     <!-- Modal -->
                     <div class="popup">
                         <p id="purchaseMessage"></p>
-                        <button id="confirmActionButton" class="button" onclick="confirmAction()"
-                            aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                        <button id="confirmActionButton" class="button" onclick="confirmAction()"aria-label="Conferma acquisto">CONFERMA</button>
+                        <button id="AnnullaButton" class="button" onclick="closeBookingPopup()" aria-label="Annulla acquisto">ANNULLA</button>
                     </div>
-                </div>
-                <div id="PurchasingConfirmationPopup" class="overlay hidden">
-                    <!-- Modal -->
-                    <div class="popup">
-                        <p id="PurchasingConfirmationMessage"></p>
-                        <button id="PurchasingButton" class="button" aria-label="Richiesta di conferma acquisto" onclick="confirmPurchasing()">CONFERMA</button>
-                        <button class="button" onclick="closeBookingPopup()" aria-label="Annulla acquisto">ANNULLA</button>
-                    </div>
-                </div>
+                </div>  
+                
+
             </div>
 
         </div>
 
     </div>
     <div class="fixed">
-        <a href=#backButton class="fixed-basket-btn">
+        <button class="fixed-basket-btn">
+            <a href=#header style="color: white; text-decoration: none;">
             <span class="fa-solid fa-circle-chevron-up"
                 aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
             Torna su
         </a>
+        </button>
     </div>
 </main>
     <footer>

@@ -29,7 +29,7 @@ function aggiungiProdotto(nome, prezzo) {
 // Event Listener Acquista
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#acquista').addEventListener('click', function () {
-    showPopup("ACQUISTO ANDATO A BUON FINE!");
+    showPopup("Sei sicuro di voler procedere all'acquisto?");
   });
 });
 
@@ -38,7 +38,7 @@ function showPopup(msg) {
   document.getElementById('purchaseMessage').innerHTML = "" + msg;
 
   // Disabilita tab per tutti gli elementi tranne il bottone di conferma
-  disableTabForAllExcept(document.getElementById('confirmActionButton'));
+  disableTabForAllExcept(document.getElementById('confirmActionButton'),document.getElementById('AnnullaButton'));
 
   setTimeout(() => {
     document.getElementById('confirmActionButton').focus();
@@ -52,10 +52,10 @@ function confirmAction() {
   // Altre azioni da eseguire dopo la conferma
 }
 
-function disableTabForAllExcept(element) {
+function disableTabForAllExcept(element1, element2) {
   const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
   focusableElements.forEach(el => {
-    if (el !== element) {
+    if (el !== element1 && el !== element2 ) {
       el.setAttribute('tabindex', '-1');
     }
   });
@@ -103,7 +103,7 @@ function showPurchasingPopup(msg) {
 // Final purchasing confirmation
 function confirmPurchasing() {
   var modal = document.getElementById('confirmationPopup');
-  document.getElementById('purchaseMessage').innerHTML = "ACQUISTO ANDATO A BUON FINE!";
+  document.getElementById('purchaseMessage').innerHTML = "Sei sicuro di voler procedere all'acquisto?";
   modal.classList.remove('hidden');
   closeBookingPopup();
   setTimeout(() => {
@@ -113,6 +113,6 @@ function confirmPurchasing() {
 
 // Close the purchasing confirmation popup
 function closeBookingPopup() {
-  var modal = document.getElementById('PurchasingConfirmationPopup');
+  var modal = document.getElementById('confirmationPopup');
   modal.classList.add('hidden');
 }

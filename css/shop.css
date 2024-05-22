@@ -30,7 +30,7 @@
 
 .basket-inner{
     min-height: 40px;
-    max-height:190px ;
+    max-height:210px ;
     overflow:auto;
     margin:25px 24px 0;
     padding-right:2px;
@@ -121,6 +121,7 @@
     transition: background-color 0.3s, box-shadow 0.3s;
     font-weight: lighter;
     transition: transform 0.2s ease;
+    cursor: pointer;
 
 }
 .addtocart-button:active{
@@ -148,6 +149,11 @@ button{
     border: solid 3px white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     font-weight: bold;
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.96);
 }
 
 li{
@@ -238,4 +244,6 @@ a{
     margin: 10px;
     padding: 10px 20px;
   }
+
+  
   
