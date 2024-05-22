@@ -91,6 +91,11 @@ input[type="checkbox"] {
         /* Ensure consistent spacing between form elements */
     }
 
+    #returnDate.no-hover{
+        border-radius: 15px;
+        border: 1.5px solid;
+    }
+
     .form-row label,
     .form-row input,
     .form-row button,
