@@ -32,17 +32,11 @@ header {
     max-height: 50px; /* Regola l'altezza del logo */
 }
 
-
-
-
-
 .header-content {
-    display:flex;
     width: 65%;
     text-align: center;
     align-items: center;
     justify-items: center;
-
 }
 
 header h1 {
