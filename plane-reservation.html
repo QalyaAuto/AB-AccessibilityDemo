@@ -118,24 +118,22 @@
             </div>
         </form>
         <div id="resultSearch" class="hidden list">
-            <ul id="ticketList">
+            <ul id="ticketList" aria-label="Lista di biglietti disponibili">
                 <!-- 1st Ticket -->
-                <li>
+                <li role="article" aria-labelledby="ticket1-summary">
                     <div class="ticket-container">
-                        <div class="ticket-summary">
-                            <div class="ticket-route">
+                        <div class="ticket-summary" id="ticket1-summary">
+                            <div class="ticket-route" role="region" aria-label="Percorso del biglietto">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
-                                            Ciampino</p>
+                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <hr />
                                         <i class="fa-solid fa-plane"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
-                                            Malpensa</p>
+                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
                                     </span>
                                 </div>
                             </div>
@@ -143,9 +141,9 @@
                                 <span><strong>Data:</strong> 12 Giugno</span>
                                 <span><strong>Partenza:</strong> 6:20</span>
                             </div>
-                            <button class="ticket-button" onclick="toggleDetails(this)">Dettagli</button>
+                            <button class="ticket-button" onclick="toggleDetails(this)" aria-expanded="false" aria-controls="ticket1-details">Dettagli</button>
                         </div>
-                        <div class="ticket-details hidden">
+                        <div class="ticket-details hidden" id="ticket1-details" role="region" aria-hidden="true">
                             <div class="ticket-times">
                                 <span>6:20 - 8:45</span>
                                 <span>2h 25 min</span>
@@ -160,28 +158,25 @@
                                 <span>100€</span>
                                 <span>Economy</span>
                             </div>
-                            <button class="ticket-button"
-                                onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
+                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
                 <!-- 2nd Ticket -->
-                <li>
+                <li role="article" aria-labelledby="ticket2-summary">
                     <div class="ticket-container">
-                        <div class="ticket-summary">
-                            <div class="ticket-route">
+                        <div class="ticket-summary" id="ticket2-summary">
+                            <div class="ticket-route" role="region" aria-label="Percorso del biglietto">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
-                                            Ciampino</p>
+                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <hr />
                                         <i class="fa-solid fa-plane"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
-                                            Malpensa</p>
+                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
                                     </span>
                                 </div>
                             </div>
@@ -189,9 +184,9 @@
                                 <span><strong>Data:</strong> 12 Giugno</span>
                                 <span><strong>Partenza:</strong> 8:24</span>
                             </div>
-                            <button class="ticket-button" onclick="toggleDetails(this)">Dettagli</button>
+                            <button class="ticket-button" onclick="toggleDetails(this)" aria-expanded="false" aria-controls="ticket2-details">Dettagli</button>
                         </div>
-                        <div class="ticket-details hidden">
+                        <div class="ticket-details hidden" id="ticket2-details" role="region" aria-hidden="true">
                             <div class="ticket-times">
                                 <span>8:24 - 10:49</span>
                                 <span>2h 25 min</span>
@@ -206,38 +201,35 @@
                                 <span>95€</span>
                                 <span>Economy</span>
                             </div>
-                            <button class="ticket-button"
-                                onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
+                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
                 <!-- 3rd Ticket -->
-                <li>
+                <li role="article" aria-labelledby="ticket3-summary">
                     <div class="ticket-container">
-                        <div class="ticket-summary">
-                            <div class="ticket-route">
+                        <div class="ticket-summary" id="ticket3-summary">
+                            <div class="ticket-route" role="region" aria-label="Percorso del biglietto">
                                 <div class="route-section">
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma
-                                            Ciampino</p>
+                                        <p aria-label="Aereoporto di partenza" style="font-weight: bolder;">Roma Ciampino</p>
                                     </span>
                                     <div class="route-icon">
                                         <hr />
                                         <i class="fa-solid fa-plane"></i>
                                     </div>
                                     <span class="route-text">
-                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano
-                                            Malpensa</p>
+                                        <p aria-label="Aereoporto di destinazione" style="font-weight: bolder;">Milano Malpensa</p>
                                     </span>
                                 </div>
                             </div>
                             <div class="ticket-departure">
                                 <span><strong>Data:</strong> 12 Giugno</span>
-                                <span><strong>Partenza:</strong> 6:20</span>
+                                <span><strong>Partenza:</strong> 12:00</span>
                             </div>
-                            <button class="ticket-button" onclick="toggleDetails(this)">Dettagli</button>
+                            <button class="ticket-button" onclick="toggleDetails(this)" aria-expanded="false" aria-controls="ticket3-details">Dettagli</button>
                         </div>
-                        <div class="ticket-details hidden">
+                        <div class="ticket-details hidden" id="ticket3-details" role="region" aria-hidden="true">
                             <div class="ticket-times">
                                 <span>12:00 - 13:25</span>
                                 <span>2h 25 min</span>
@@ -252,12 +244,11 @@
                                 <span>250€</span>
                                 <span>Prima Classe</span>
                             </div>
-                            <button class="ticket-button"
-                                onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
+                            <button class="ticket-button" onclick="showBookingPopup('Roma Ciampino', 'Milano Malpensa')">Prenota</button>
                         </div>
                     </div>
                 </li>
-            </ul>
+            </ul>            
         </div>
         <div id="confirmationPopup" class="overlay hidden">
             <!-- Modal -->

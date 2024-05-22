@@ -32,10 +32,35 @@ document.getElementById('bookingForm').addEventListener('submit', function (even
   }
 
   if (this.checkValidity()) {
+    updateTickets(); // Update tickets when form is valid and submitted
     var ticketList = document.getElementById("resultSearch");
     ticketList.classList.toggle("hidden");
   }
 });
+
+function updateTickets() {
+  const fromValue = document.getElementById('from').value;
+  const toValue = document.getElementById('to').value;
+
+  const departureElements = document.querySelectorAll('[aria-label="Aereoporto di partenza"]');
+  const destinationElements = document.querySelectorAll('[aria-label="Aereoporto di destinazione"]');
+  const departureDateValue = new Date(document.getElementById('departureDate').value).toLocaleDateString('it-IT', { day: 'numeric', month: 'long' });
+  const dateElements = document.querySelectorAll('.ticket-departure span');
+
+  departureElements.forEach(element => {
+    element.textContent = fromValue;
+  });
+
+  destinationElements.forEach(element => {
+    element.textContent = toValue;
+  });
+
+  dateElements.forEach(element => {
+    if (element.innerHTML.includes('Data:')) {
+      element.innerHTML = `<strong>Data:</strong> ${departureDateValue}`;
+    }
+  });
+}
 
 // Toggle ticket details
 function toggleDetails(button) {
