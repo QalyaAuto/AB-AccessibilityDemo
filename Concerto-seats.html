@@ -23,7 +23,7 @@
         <h1>Prenotazione posti Concerto</h1>
     </div>
     <div class="logo-container">
-        <img src="https://www.claritergroup.com/wp-content/uploads/2022/02/Clariter-TM-Transparent-LQ.png" alt="Clariter Logo" class="logo">
+        <img src="assets\images\logo-clariter.png" alt="Clariter Logo" class="logo">
     </div>
     
 </header>
@@ -531,6 +531,14 @@
                             <p id="reservedSeatsMessage"></p>
                             <button id="confirmActionButton" class="button" onclick="confirmAction()"
                                 aria-label="Chiudi messaggio di conferma">CONFERMA</button>
+                        </div>
+                    </div>
+                    <div id="cancelPopup" class="overlay hidden">
+                        <!-- Modal -->
+                        <div class="popup">
+                            <p id="cancelMessage"></p>
+                            <button id="cancelActionButton" class="button" aria-label="Conferma cancellazione selezione posti">CONFERMA</button>
+                            <button id="closeActionButton" class="button" onclick="closeCancelPopup()" aria-label="Chiudi messaggio">CHIUDI</button>
                         </div>
                     </div>
                 </div>
