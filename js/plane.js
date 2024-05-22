@@ -7,6 +7,21 @@ function swapLocations() {
   toInput.value = tempLocation;
 }
 
+document.getElementById('departureOnlyFlights').addEventListener('change', function () {
+  var returnDateInput = document.getElementById('returnDate');
+  if (this.checked) {
+      returnDateInput.disabled = true;
+      returnDateInput.value = ''; // Opzionale: resetta il valore della data di ritorno
+      returnDateInput.style.cursor = "not-allowed";
+      returnDateInput.classList.add('no-hover');
+      
+  } else {
+      returnDateInput.disabled = false;
+      returnDateInput.style.cursor = "";
+      returnDateInput.classList.remove('no-hover');
+  }
+});
+
 // Event listener for the booking form submission
 document.getElementById('bookingForm').addEventListener('submit', function (event) {
   event.preventDefault();
