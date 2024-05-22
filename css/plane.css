@@ -73,11 +73,15 @@ input[type="checkbox"] {
 }
 
 /* Responsive adjustments for inline display of form elements */
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
     .form-row {
         display: flex;
         align-items: center;
-        height: 4em;
+        height: 5em;
+    }
+    
+    .form-row #swapButton {
+        margin-top: 3.8em;
     }
 
     .form-row input:hover,
