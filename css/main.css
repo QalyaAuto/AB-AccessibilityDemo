@@ -5,6 +5,7 @@ header {
     background: linear-gradient(135deg, #2100c8, #663399);
     color: #f0f0f0;
     padding: 20px 0;
+    height: 5em;
 }
 
 .backbutton-content {
