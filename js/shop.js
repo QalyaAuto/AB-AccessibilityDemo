@@ -46,6 +46,9 @@ function showPopup(msg) {
 }
 
 function confirmAction() {
+  var x = document.getElementById("toast");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
   document.getElementById('confirmationPopup').classList.add('hidden');
   enableTabForAll();
 
@@ -115,4 +118,8 @@ function confirmPurchasing() {
 function closeBookingPopup() {
   var modal = document.getElementById('confirmationPopup');
   modal.classList.add('hidden');
+}
+
+function toastFunction() {
+  
 }
