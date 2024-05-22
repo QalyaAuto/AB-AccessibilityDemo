@@ -42,7 +42,7 @@ document.getElementById('cancel').addEventListener('click', function() {
 });
 
 // Event listener for the 'cancelActionButton' to deselect all selected seats
-document.getElementById('cancelActionButton').addEventListener('click', function(){
+document.getElementById('cancel').addEventListener('click', function(){
     const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
     checkboxes.forEach(function(checkbox) {
         if (checkbox.checked && !checkbox.disabled) {
