@@ -6,7 +6,10 @@ function aggiungiProdotto(nome, prezzo) {
   nuovoProdotto.textContent = nome + " - " + prezzo + "€ ";
   buttonr.textContent = "rimuovi";
 
-  elencoProdotti.appendChild(nuovoProdotto);
+
+  var primoElemento = elencoProdotti.firstChild;
+  elencoProdotti.insertBefore(nuovoProdotto, primoElemento);
+  //elencoProdotti.appendChild(nuovoProdotto);
   nuovoProdotto.appendChild(buttonr);
   buttonr.addEventListener('click', rimuoviElementoPadre);
 
