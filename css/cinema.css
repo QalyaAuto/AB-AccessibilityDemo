@@ -60,7 +60,7 @@ ol {
 /* Pink when the seat is selected */
 .seat input[type=checkbox]:checked+label {
   background: #ff99e6;
-  border: 1px solid rgb(0, 0, 0)
+  border: 2.5px solid rgb(0, 0, 0)
 }
 
 .seat input[type=checkbox]:disabled+label {
