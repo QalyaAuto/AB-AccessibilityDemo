@@ -68,6 +68,8 @@ function confirmAction() {
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
   document.getElementById('confirmationPopup').classList.add('hidden');
   enableTabForAll();
+  document.getElementById('products-list').replaceChildren();
+  document.getElementById("total").textContent = 0; 
 
   // Altre azioni da eseguire dopo la conferma
 }
