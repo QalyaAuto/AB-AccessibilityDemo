@@ -27,11 +27,28 @@ function aggiungiProdotto(nome, prezzo) {
 }
 
 // Event Listener Acquista
-document.addEventListener('DOMContentLoaded', function () {
+  function Acquista () {
+
+    if (document.getElementById("products-list").children.length === 0) {
+      console.log('vuotooo');
+ }else if (document.getElementById("products-list").children.length>0){
+      showPopup("Sei sicuro di voler procedere all'acquisto?");
+}
+
+  }
+  //document.querySelector('#acquista').addEventListener('click', function () {
+
+   
+  //});
+
+  // Event Listener Acquista
+/*document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#acquista').addEventListener('click', function () {
-    showPopup("Sei sicuro di voler procedere all'acquisto?");
+      showPurchasingPopup("Sei sicuro di voler procedere all'acquisto?");
   });
-});
+});*/
+
+
 
 function showPopup(msg) {
   document.getElementById('confirmationPopup').classList.remove('hidden');
@@ -85,12 +102,7 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
-// Event Listener Acquista
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('#acquista').addEventListener('click', function () {
-      showPurchasingPopup("Sei sicuro di voler procedere all'acquisto?");
-  });
-});
+
 
 // Show purchasing confirmation popup
 function showPurchasingPopup(msg) {

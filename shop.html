@@ -251,7 +251,7 @@
                 </div>
                 <div class="results">
                     <span class="total">Totale: <span id="total">0</span> €</span>
-                    <button class="purchase" id="acquista" aria-label="Completa l'acquisto">Acquista</button>
+                    <button class="purchase" id="acquista" onclick="Acquista()"  aria-label="Completa l'acquisto">Acquista</button>
                 </div>
                 <div id="confirmationPopup" class="overlay hidden">
                     <!-- Modal -->
@@ -273,13 +273,15 @@
 
     </div>
     <div class="fixed">
-        <button class="fixed-basket-btn">
-            <a href=#header style="color: white; text-decoration: none;">
+        <a href=#header style="color: white; text-decoration: none;"tabindex="-1">
+        <button class="fixed-basket-btn" >
+            
             <span class="fa-solid fa-circle-chevron-up"
                 aria-label="freccia per tornare alla pagina precedente">&nbsp;&nbsp;</span>
             Torna su
-        </a>
+        
         </button>
+        </a>
     </div>
 </main>
     <footer>
