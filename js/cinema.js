@@ -1,91 +1,84 @@
-// Event listener for the 'submit' button to reserve selected seats
+// Funzione per mostrare il popup di conferma prenotazione
 document.getElementById('submit').addEventListener('click', function() {
     const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
-    const reservedSeats = document.querySelector('#reservedSeats');
-
-    let checkedSeats = [];
-
-    // Iterate through all checkboxes to find the selected ones
-    checkboxes.forEach(function(checkbox) {
-        if (checkbox.checked && !checkbox.disabled) {
-            checkedSeats.push(checkbox.id)
-            checkbox.setAttribute('aria-disabled', 'true');
-            checkbox.disabled = true; // Disable the checkbox
-            checkbox.parentElement.classList.add('reserved'); // Add 'reserved' class to indicate reservation
-        }
-    });
-
-    // If there are checked seats, show a confirmation message
-    if (checkedSeats.length > 0) {
-        let msg = 'I posti ' + checkedSeats.join(', ') + ' sono stati prenotati';
-        reservedSeats.innerHTML = "Avete prenotato i posti " + checkedSeats.join(', ');
-        reservedSeats.style.display = "block";
-        showPopup(msg);
-    }
-});
-
-// Event listener for the 'cancel' button to show a modal with the selected seats
-document.getElementById('cancel').addEventListener('click', function() {
-    const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
-    const cancelSeatsMessage = document.querySelector('#cancelMessage');
-
     let checkedSeats = Array.from(checkboxes)
                             .filter(checkbox => checkbox.checked && !checkbox.disabled)
                             .map(checkbox => checkbox.id);
 
-    // If there are checked seats, show a cancellation confirmation message
     if (checkedSeats.length > 0) {
-        let msg = 'I posti ' + checkedSeats.join(', ') + ' sono stati prenotati';
-        cancelSeatsMessage.innerHTML = msg;
-        showCancelPopup(msg);
+        let msg = "Vuoi prenotare i posti " + checkedSeats.join(', ') + "?";
+        showPopup(msg, 'confirmationPopup');
     }
 });
 
-// Event listener for the 'cancelActionButton' to deselect all selected seats
-document.getElementById('cancel').addEventListener('click', function(){
+// Funzione per mostrare il popup di annullamento prenotazione
+document.getElementById('cancel').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
+    let checkedSeats = Array.from(checkboxes)
+                            .filter(checkbox => checkbox.checked && !checkbox.disabled)
+                            .map(checkbox => checkbox.id);
+
+    if (checkedSeats.length > 0) {
+        let msg = "Vuoi annullare la prenotazione dei posti " + checkedSeats.join(', ') + "?";
+        showPopup(msg, 'cancelPopup');
+    }
+});
+
+// Funzione per mostrare il popup specifico
+function showPopup(msg, popupId) {
+    const modal = document.getElementById(popupId);
+    document.getElementById(popupId === 'confirmationPopup' ? 'reservedSeatsMessage' : 'cancelMessage').innerHTML = msg;
+    modal.classList.remove('hidden');
+    trapFocus(modal); // Trap focus inside the modal
+}
+
+// Funzione per confermare la prenotazione
+function confirmAction() {
+    const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
+    let checkedSeats = Array.from(checkboxes)
+                            .filter(checkbox => checkbox.checked && !checkbox.disabled)
+                            .map(checkbox => checkbox.id);
+    
+    checkedSeats.forEach(function(seat) {
+        const checkbox = document.getElementById(seat);
+        checkbox.setAttribute('aria-disabled', 'true');
+        checkbox.disabled = true;
+        checkbox.parentElement.classList.add('reserved');
+    });
+    
+    const modal = document.getElementById('confirmationPopup');
+    modal.classList.add('hidden');
+    
+    const reservedSeats = document.getElementById('reservedSeats');
+    reservedSeats.innerHTML = "Avete prenotato i posti " + checkedSeats.join(', ');
+    reservedSeats.style.display = "block";
+}
+
+function confirmCancelAction() {
     const checkboxes = document.querySelectorAll('.seat input[type="checkbox"]');
     checkboxes.forEach(function(checkbox) {
         if (checkbox.checked && !checkbox.disabled) {
-            checkbox.checked = false; // Deselect all checkboxes
+            checkbox.checked = false;
         }
     });
-    closeCancelPopup(); // Close the popup after cancel action
-});
 
-// Function to show the confirmation popup
-function showPopup(msg) {
-    const modal = document.getElementById('confirmationPopup');
-    document.getElementById('reservedSeatsMessage').innerHTML = msg;
-    modal.classList.remove('hidden');
-    trapFocus(modal); // Trap focus inside the modal
-}
-
-// Function to show the cancel confirmation popup
-function showCancelPopup(msg) {
     const modal = document.getElementById('cancelPopup');
-    document.getElementById('cancelMessage').innerHTML = msg;
-    modal.classList.remove('hidden');
-    trapFocus(modal); // Trap focus inside the modal
+    modal.classList.add('hidden');
 }
 
-// Function to close the confirmation popup
+// Funzione per chiudere il popup di conferma prenotazione
 function closePopup() {
     const modal = document.getElementById('confirmationPopup');
     modal.classList.add('hidden');
 }
 
-// Function to close the cancel confirmation popup
+// Funzione per chiudere il popup di annullamento prenotazione
 function closeCancelPopup() {
     const modal = document.getElementById('cancelPopup');
     modal.classList.add('hidden');
 }
 
-// Function to confirm the action (currently just closes the popup)
-function confirmAction() {
-    closePopup();
-}
-
-// Function to trap focus inside a given modal
+// Funzione per trap focus all'interno di un modal
 function trapFocus(modal) {
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
@@ -115,7 +108,7 @@ function trapFocus(modal) {
     firstFocusableElement.focus();
 }
 
-// Event listener to close the modal when the ESC key is pressed
+// Evento per chiudere i popup quando si preme il tasto ESC
 window.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
         closePopup();
