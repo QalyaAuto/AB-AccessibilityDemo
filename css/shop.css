@@ -1,251 +1,308 @@
 .div-main {
-    width:100%;
-    overflow:auto;
-  }
-.products{
-    width:60%;
-    float:left;
+  width: 100%;
+  overflow: auto;
+}
+
+.products {
+  width: 60%;
+  float: left;
 }
 
 
-.basket{
-    width: 30%;
-    position: fixed;
-    top: 175px;
-    right:50px;
-    float:right;
-    padding: 10px 30px;
-    background: linear-gradient(to bottom right, #663399 50%, #2100c8 100%); /* Blue background */
-    color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 16px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
-    text-align: left;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    
+.basket {
+  width: 30%;
+  position: fixed;
+  top: 175px;
+  right: 50px;
+  float: right;
+  padding: 10px 30px;
+  background: linear-gradient(to bottom right, #663399 50%, #2100c8 100%);
+  /* Blue background */
+  color: white;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 16px;
+  /* Larger font size */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 30px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+  border: solid 3px white;
+  /* White border around the button */
+  text-align: left;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
 }
 
-.basket-inner{
-    min-height: 40px;
-    max-height:210px ;
-    overflow:auto;
-    margin:25px 24px 0;
-    padding-right:2px;
+.basket-inner {
+  min-height: 40px;
+  max-height: 210px;
+  overflow: auto;
+  margin: 25px 24px 0;
+  padding-right: 2px;
 }
 
-.basket-title{
-    padding: 10px 30px;
-    background-color: white; /* Blue background */
-    color: #2100c8;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 22px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    margin: 20px;
+.basket-title {
+  padding: 10px 30px;
+  background-color: white;
+  /* Blue background */
+  color: #2100c8;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 22px;
+  /* Larger font size */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 30px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+  border: solid 3px white;
+  /* White border around the button */
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin: 20px;
 }
-.total{
-    width:40%;
-    float:left;
-    padding: 10px;
-    background-color: white; /* Blue background */
-    color: #2100c8;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 22px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    margin: 20px;
-    font-weight: bold;
+
+.total {
+  width: 40%;
+  float: left;
+  padding: 10px;
+  background-color: white;
+  /* Blue background */
+  color: #2100c8;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 22px;
+  /* Larger font size */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 30px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+  border: solid 3px white;
+  /* White border around the button */
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin: 20px;
+  font-weight: bold;
 }
+
 .results {
-    overflow: auto;
-    
-  }
-.purchase{
-    width:30%;
-    float:right;
-    padding: 10px;
-    background-color: #663399; /* Blue background */
-    color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 22px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 4px white; /* White border around the button */
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    margin: 20px;
-    font-weight: lighter;
+  overflow: auto;
+
 }
+
+.purchase {
+  width: 30%;
+  float: right;
+  padding: 10px;
+  background-color: #663399;
+  /* Blue background */
+  color: white;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 22px;
+  /* Larger font size */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 30px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+  border: solid 4px white;
+  /* White border around the button */
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin: 20px;
+  font-weight: lighter;
+}
+
 .slider {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
+
 .slider-container {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease;
 }
+
 .card {
-    width: 30%;
-    flex-shrink: 0;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+  width: 30%;
+  flex-shrink: 0;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 
-.addtocart-button{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #663399;
-    color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 15px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    font-weight: lighter;
-    transition: transform 0.2s ease;
-    cursor: pointer;
+.addtocart-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #663399;
+  color: white;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 15px;
+  /* Larger font size */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 30px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+  border: solid 3px white;
+  /* White border around the button */
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: lighter;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 
 }
-.addtocart-button:active{
-    transform: scale(0.96);
+
+.addtocart-button:active {
+  transform: scale(0.96);
 }
 
 
-.next-prev-btn{
-    border: 0;
-    display: inline-block;
-    color:  #663399;
-    font-size: 40px;
-    background-color: transparent;
-    padding:0%;
-    border: none;
-    box-shadow:none;
+.next-prev-btn {
+  border: 0;
+  display: inline-block;
+  color: #663399;
+  font-size: 40px;
+  background-color: transparent;
+  padding: 0%;
+  border: none;
+  box-shadow: none;
 }
 
-button{
-    background-color: white;
-    color:#2100c8;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 14px; /* Larger font size */
-    border-radius: 30px;
-    border: solid 3px white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    font-weight: bold;
-    cursor: pointer;
+button {
+  background-color: white;
+  color: #2100c8;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 14px;
+  /* Larger font size */
+  border-radius: 30px;
+  border: solid 3px white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  cursor: pointer;
 }
 
-button:active{
-    transform: scale(0.96);
+button:active {
+  transform: scale(0.96);
 }
 
-li{
-    list-style-type:none;
-    margin: 15px;
-    font-size: 20px;
-    font-weight: bold;
+li {
+  list-style-type: none;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.fixed{
-    bottom: 0;
-    right: 0;
-    position: fixed;
-    z-index: 3000;
-    padding: 20px;
+.fixed {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 3000;
+  padding: 20px;
 }
 
-.fixed-basket-btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2100c8;
-    color: white;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 20px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 3px white; /* White border around the button */
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
+.fixed-basket-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2100c8;
+  color: white;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 20px;
+  /* Larger font size */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 30px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+  border: solid 3px white;
+  /* White border around the button */
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.category-search{
-    padding: 10px;
-    background-color: #d6bdef; /* Blue background */
-    color:black;
-    font-family: Arial, sans-serif; /* Simple sans-serif font */
-    font-size: 17px; /* Larger font size */
-    text-decoration: none; /* Removes underline */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Subtle shadow */
-    border: solid 2px white; /* White border around the button */
-    text-align: left;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    margin: 20px;
-    font-weight: lighter;
+.category-search {
+  padding: 10px;
+  background-color: #d6bdef;
+  /* Blue background */
+  color: black;
+  font-family: Arial, sans-serif;
+  /* Simple sans-serif font */
+  font-size: 17px;
+  /* Larger font size */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+  border: solid 2px white;
+  /* White border around the button */
+  text-align: left;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin: 20px;
+  font-weight: lighter;
 }
 
-a{
-    font-weight: bold;
-    margin: 10px;
-    color:black;
+a {
+  font-weight: bold;
+  margin: 10px;
+  color: black;
 }
 
 .overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-  }
-  
-  .overlay:not(.hidden) {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .popup {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-  }
-  
-  .popup p {
-    margin-top: 0;
-  }
-  
-  .popup button {
-    margin: 10px;
-    padding: 10px 20px;
-  }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
 
-  #toast {
+.overlay:not(.hidden) {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.popup p {
+  margin-top: 0;
+}
+
+.popup button {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+#toast {
   visibility: hidden;
   min-width: 250px;
   margin-left: -200px;
@@ -260,7 +317,9 @@ a{
   left: 50%;
   bottom: 30px;
   font-size: 16px;
-  border : 9px solid #fff;
+  border: #fff solid 8px;
+  box-shadow: 5px 5px 5px 5px #454849;
+
 }
 
 #toast.show {
@@ -270,28 +329,54 @@ a{
 }
 
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-.checkicon i{
-    font-size: 40px;
-    color: #ffffff;
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
-  
-  
+.checkicon i {
+  font-size: 40px;
+  color: #ffffff;
+}
