@@ -1,3 +1,13 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+  const inputElement = document.getElementById('bookingForm');
+
+  inputElement.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+          event.preventDefault();
+      }
+  });
+});
 // Swap departure and arrival locations
 function swapLocations() {
   var fromInput = document.getElementById('from');
